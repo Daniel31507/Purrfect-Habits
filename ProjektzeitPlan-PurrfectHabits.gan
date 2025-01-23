@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Purrfect Habits" company="" webLink="http://" view-date="2024-11-18" view-index="0" gantt-divider-location="524" resource-divider-location="300" version="3.3.3312" locale="de_DE">
+<?xml version="1.0" encoding="UTF-8"?><project name="Purrfect Habits" company="" webLink="http://" view-date="2024-09-01" view-index="0" gantt-divider-location="415" resource-divider-location="300" version="3.3.3312" locale="de_DE">
     <description/>
-    <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Vorgang" width="290" order="0"/>
-        <field id="tpd4" name="Anfang" width="109" order="1"/>
-        <field id="tpd5" name="Ende" width="109" order="2"/>
+    <view zooming-state="default:9" id="gantt-chart">
+        <field id="tpd3" name="Vorgang" width="236" order="0"/>
+        <field id="tpd4" name="Anfang" width="89" order="1"/>
+        <field id="tpd5" name="Ende" width="89" order="2"/>
         <field id="tpd15" name="Notizen" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
         <option id="filter.overdueTasks" value="false"/>
         <option id="filter.inProgressTodayTasks" value="false"/>
         <timeline><![CDATA[11,2,14,18,17,15,12,9,4,1,22,20,13,16,8,23,3,21]]></timeline>
-        <option id="color.recent"><![CDATA[#ff33ff #00ffff #cc00cc #cccc00 #ffff00 #ff3333 #cc0033 #33cc00 #00ff00 #9999ff]]></option>
+        <option id="color.recent"><![CDATA[#cc00cc #cccc00 #cc0033 #33cc00 #9999ff #ff33ff #00ffff #ffff00 #ff3333 #00ff00]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Ressource" width="210" order="0"/>
@@ -40,7 +40,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" uid="3f9d2921faf44f47b88659d7367371eb" name="Planung" meeting="false" start="2024-11-18" duration="14" complete="100" expand="true">
+        <task id="0" uid="3f9d2921faf44f47b88659d7367371eb" name="Planung" color="#9999ff" meeting="false" start="2024-11-18" duration="14" complete="100" expand="true">
             <depend id="5" type="2" difference="0" hardness="Strong"/>
             <task id="1" uid="9e188d0b96784ca9908805b9410a8e50" name="Projektziele definieren" color="#9999ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2024-11-18" duration="10" complete="100" expand="true">
                 <depend id="2" type="2" difference="0" hardness="Strong"/>
@@ -53,9 +53,9 @@
             </task>
         </task>
         <task id="4" uid="280052934e354ab998f32f63469bdf8d" name="Meilenstein - Planung" color="#9999ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="true" start="2024-12-06" duration="0" complete="100" expand="true"/>
-        <task id="5" uid="1e869df0ff904112a6498dba0347829e" name="Design" meeting="false" start="2025-01-07" duration="25" complete="9" expand="true">
+        <task id="5" uid="1e869df0ff904112a6498dba0347829e" name="Design" color="#33cc00" meeting="false" start="2025-01-07" duration="25" complete="9" expand="true">
             <depend id="10" type="2" difference="0" hardness="Strong"/>
-            <task id="6" uid="31695f24ff8f47549467b251573beb62" name="Designbeschprechung" color="#33cc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-01-07" duration="1" complete="100" expand="true">
+            <task id="6" uid="31695f24ff8f47549467b251573beb62" name="Designbesprechung" color="#33cc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-01-07" duration="1" complete="100" expand="true">
                 <depend id="7" type="2" difference="11" hardness="Strong"/>
             </task>
             <task id="7" uid="0c0951dbdc8f47dd8a9e194fc47788bf" name="Figma Prototyp" color="#33cc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-01-23" duration="5" complete="0" expand="true">
@@ -66,7 +66,7 @@
             </task>
         </task>
         <task id="9" uid="cfd63ec901b747d887b01d3685a46851" name="Meilenstein - Design" color="#00ff00" meeting="true" start="2025-02-11" duration="0" complete="0" expand="true"/>
-        <task id="10" uid="eaf30e7ba0e64626b4012b2a2ff3dc1b" name="Ressourcen" meeting="false" start="2025-02-25" duration="6" complete="0" expand="true">
+        <task id="10" uid="eaf30e7ba0e64626b4012b2a2ff3dc1b" name="Ressourcen" color="#cc0033" meeting="false" start="2025-02-25" duration="6" complete="0" expand="true">
             <depend id="14" type="2" difference="0" hardness="Strong"/>
             <task id="11" uid="c5b95368012a46468254bbb38b693ec7" name="Auswahl der Angewohnheiten" color="#cc0033" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-02-25" duration="3" complete="0" expand="true">
                 <depend id="12" type="2" difference="0" hardness="Strong"/>
@@ -76,7 +76,7 @@
             </task>
         </task>
         <task id="13" uid="0097f178c68b4920a4b871c1ff7cb684" name="Meilenstein - Ressourcen" color="#ff3333" meeting="true" start="2025-03-05" duration="0" complete="0" expand="true"/>
-        <task id="14" uid="10ce93791dc0464285ad7a8a0b22c7a4" name="Webseite" meeting="false" start="2025-03-14" duration="34" complete="0" expand="true">
+        <task id="14" uid="10ce93791dc0464285ad7a8a0b22c7a4" name="Webseite" color="#cccc00" meeting="false" start="2025-03-14" duration="34" complete="0" expand="true">
             <depend id="19" type="2" difference="0" hardness="Strong"/>
             <task id="15" uid="6f97a1940faf43b383c81661de5afee8" name="Grundstruktur und Animation" color="#ffff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-03-14" duration="15" complete="0" expand="true">
                 <depend id="16" type="2" difference="0" hardness="Strong"/>
@@ -89,18 +89,18 @@
             </task>
         </task>
         <task id="18" uid="132640cb44f147a4ba7d980af2d4c833" name="Meilenstein - Webseite" color="#cccc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="true" start="2025-05-01" duration="0" complete="0" expand="true"/>
-        <task id="19" uid="c10f2f0bb0d044b397dd1867b049af83" name="Fertigstellung" meeting="false" start="2025-05-09" duration="14" complete="0" expand="true">
+        <task id="19" uid="c10f2f0bb0d044b397dd1867b049af83" name="Fertigstellung" color="#cc00cc" meeting="false" start="2025-05-09" duration="24" complete="0" expand="true">
             <task id="20" uid="652878fe8c7b4b71b1157055a0523369" name="Nutzertests durchführen" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-05-09" duration="5" complete="0" expand="true">
                 <depend id="21" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="21" uid="cc1fa3e4b05443908f503a2799bc72d8" name="Feedback umsetzen" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-05-16" duration="8" complete="0" expand="true">
-                <depend id="22" type="2" difference="0" hardness="Strong"/>
+                <depend id="22" type="2" difference="10" hardness="Strong"/>
             </task>
-            <task id="22" uid="0caa0b22b4774dd3a55ceb747f384eaa" name="Endresultat präsentieren" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-05-28" duration="1" complete="0" expand="true">
+            <task id="22" uid="0caa0b22b4774dd3a55ceb747f384eaa" name="Endresultat präsentieren" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-06-11" duration="1" complete="0" expand="true">
                 <depend id="23" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="23" uid="c94b91be49ca4906b4f467f7d19e9bfa" name="Meilenstein - Fertigstellung" color="#cc00cc" meeting="true" start="2025-05-29" duration="0" complete="0" expand="true"/>
+        <task id="23" uid="c94b91be49ca4906b4f467f7d19e9bfa" name="Meilenstein - Fertigstellung" color="#cc00cc" meeting="true" start="2025-06-12" duration="0" complete="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="0" name="Niilo Rieser" function="Default:1" contacts="n.rieser@students.htl-leonding.ac.at" phone="+43 670 6056310"/>
@@ -116,7 +116,6 @@
         <allocation task-id="6" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
         <allocation task-id="7" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="11" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
-        <allocation task-id="12" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
         <allocation task-id="15" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
         <allocation task-id="16" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
         <allocation task-id="17" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
@@ -127,8 +126,7 @@
         <allocation task-id="2" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="3" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="6" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="7" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="11" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="12" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="15" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="16" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
@@ -144,8 +142,7 @@
         <allocation task-id="6" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="7" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="8" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="11" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="12" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="15" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="16" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="17" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
@@ -157,8 +154,7 @@
         <allocation task-id="3" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="4" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="6" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="7" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="11" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="12" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="15" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="16" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
