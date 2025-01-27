@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Purrfect Habits" company="" webLink="http://" view-date="2024-09-01" view-index="0" gantt-divider-location="415" resource-divider-location="300" version="3.3.3312" locale="de_DE">
+<?xml version="1.0" encoding="UTF-8"?><project name="Purrfect Habits" company="" webLink="http://" view-date="2024-11-01" view-index="0" gantt-divider-location="391" resource-divider-location="300" version="3.3.3312" locale="de_DE">
     <description/>
-    <view zooming-state="default:9" id="gantt-chart">
-        <field id="tpd3" name="Vorgang" width="236" order="0"/>
-        <field id="tpd4" name="Anfang" width="89" order="1"/>
-        <field id="tpd5" name="Ende" width="89" order="2"/>
+    <view zooming-state="default:8" id="gantt-chart">
+        <field id="tpd3" name="Vorgang" width="222" order="0"/>
+        <field id="tpd4" name="Anfang" width="84" order="1"/>
+        <field id="tpd5" name="Ende" width="84" order="2"/>
         <field id="tpd15" name="Notizen" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
         <option id="filter.overdueTasks" value="false"/>
         <option id="filter.inProgressTodayTasks" value="false"/>
-        <timeline><![CDATA[11,2,14,18,17,15,12,9,4,1,22,20,13,16,8,23,3,21]]></timeline>
+        <timeline><![CDATA[21,4,22,13,1,15,8,2,3,9,11,17,18,14,12,23,16,20]]></timeline>
         <option id="color.recent"><![CDATA[#cc00cc #cccc00 #cc0033 #33cc00 #9999ff #ff33ff #00ffff #ffff00 #ff3333 #00ff00]]></option>
     </view>
     <view id="resource-table">
@@ -53,19 +53,19 @@
             </task>
         </task>
         <task id="4" uid="280052934e354ab998f32f63469bdf8d" name="Meilenstein - Planung" color="#9999ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="true" start="2024-12-06" duration="0" complete="100" expand="true"/>
-        <task id="5" uid="1e869df0ff904112a6498dba0347829e" name="Design" color="#33cc00" meeting="false" start="2025-01-07" duration="25" complete="9" expand="true">
+        <task id="5" uid="1e869df0ff904112a6498dba0347829e" name="Design" color="#33cc00" meeting="false" start="2025-01-07" duration="29" complete="9" expand="true">
             <depend id="10" type="2" difference="0" hardness="Strong"/>
             <task id="6" uid="31695f24ff8f47549467b251573beb62" name="Designbesprechung" color="#33cc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-01-07" duration="1" complete="100" expand="true">
-                <depend id="7" type="2" difference="11" hardness="Strong"/>
+                <depend id="7" type="2" difference="15" hardness="Strong"/>
             </task>
-            <task id="7" uid="0c0951dbdc8f47dd8a9e194fc47788bf" name="Figma Prototyp" color="#33cc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-01-23" duration="5" complete="0" expand="true">
+            <task id="7" uid="0c0951dbdc8f47dd8a9e194fc47788bf" name="Figma Prototyp" color="#33cc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-01-29" duration="5" complete="0" expand="true">
                 <depend id="8" type="2" difference="3" hardness="Strong"/>
             </task>
-            <task id="8" uid="852ec655b2fe4050811f04e894cbd09c" name="Katzenanimation erstellen" color="#33cc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-02-04" duration="5" complete="0" expand="true">
+            <task id="8" uid="852ec655b2fe4050811f04e894cbd09c" name="Katzenanimation erstellen" color="#33cc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-02-10" duration="5" complete="0" expand="true">
                 <depend id="9" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="9" uid="cfd63ec901b747d887b01d3685a46851" name="Meilenstein - Design" color="#00ff00" meeting="true" start="2025-02-11" duration="0" complete="0" expand="true"/>
+        <task id="9" uid="cfd63ec901b747d887b01d3685a46851" name="Meilenstein - Design" color="#00ff00" meeting="true" start="2025-02-17" duration="0" complete="0" expand="true"/>
         <task id="10" uid="eaf30e7ba0e64626b4012b2a2ff3dc1b" name="Ressourcen" color="#cc0033" meeting="false" start="2025-02-25" duration="6" complete="0" expand="true">
             <depend id="14" type="2" difference="0" hardness="Strong"/>
             <task id="11" uid="c5b95368012a46468254bbb38b693ec7" name="Auswahl der Angewohnheiten" color="#cc0033" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-02-25" duration="3" complete="0" expand="true">
@@ -76,7 +76,7 @@
             </task>
         </task>
         <task id="13" uid="0097f178c68b4920a4b871c1ff7cb684" name="Meilenstein - Ressourcen" color="#ff3333" meeting="true" start="2025-03-05" duration="0" complete="0" expand="true"/>
-        <task id="14" uid="10ce93791dc0464285ad7a8a0b22c7a4" name="Webseite" color="#cccc00" meeting="false" start="2025-03-14" duration="34" complete="0" expand="true">
+        <task id="14" uid="10ce93791dc0464285ad7a8a0b22c7a4" name="Webseite" color="#cccc00" meeting="false" start="2025-03-14" duration="34" complete="0" expand="false">
             <depend id="19" type="2" difference="0" hardness="Strong"/>
             <task id="15" uid="6f97a1940faf43b383c81661de5afee8" name="Grundstruktur und Animation" color="#ffff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-03-14" duration="15" complete="0" expand="true">
                 <depend id="16" type="2" difference="0" hardness="Strong"/>
