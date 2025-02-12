@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katzenanimation Prototyp</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(60, 141, 234);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
+        /* Statusköpfe */
+
+        /* Green Status Head */
+        #greenHead{
+            max-width: auto;
+            max-height: 20vh;
+        }
+
+        #greenMouth{
+            color: rgba(255, 255, 255, 0);
+            background-color: #f56464;
+            border-radius: 0px 0px 171px 171px;
+            -webkit-border-radius: 0px 0px 171px 171px;
+            -moz-border-radius: 0px 0px 171px 171px;
+            position: absolute;
+            left: 18.2vw;
+            bottom: 75.8vh;
+            animation: greenStatus 10s ease-in-out infinite;
+        }
+
+        @keyframes greenStatus {
+          0%{transform: rotate(0deg);}
+          50%{transform: rotate(-5deg);}
+          100%{transform: rotate(0deg);}
+        }
+
+
+        /* Yellow Status Head */
+        #yellowHead{
+            max-width: auto;
+            max-height: 20vh;
+        }
+
+        #yellowStatusBar{
+            color: rgba(255, 255, 255, 0);
+            background-color: #E4D500;
+            position: absolute;
+            left: 4vw;
+            bottom: 81.8vh;
+            animation: yellowStatus 10s ease-in-out infinite;
+        }
+
+        @keyframes yellowStatus {
+            0%{bottom: 81.8vh;}
+            10%{bottom: 81.9vh;}
+            20%{bottom: 82vh;}
+            30%{bottom: 82.1vh;}
+            40%{bottom: 82.2vh;}
+            50%{bottom: 82.3vh;}
+            60%{bottom: 82.2vh;}
+            70%{bottom: 82.1vh}
+            80%{bottom: 82vh;}
+            90%{bottom: 81.9vh;}
+            100%{bottom: 81.8vh;}
+        }
+
+
+        /* Red Status Head */
+        #redHead{
+            max-width: auto;
+            max-height: 20vh;
+        }
+
+        #redStatusBarRight{
+            color: rgba(255, 255, 255, 0);
+            background-color: #E40000;
+            position: absolute;
+            left: 30.5vw;
+            bottom: 81.8vh;
+            animation: redStatusRight 10s ease-in-out infinite;
+        }
+
+        #redStatusBarLeft{
+            color: rgba(255, 255, 255, 0);
+            background-color: #E40000;
+            position: absolute;
+            left: 28.2vw;
+            bottom: 81.8vh;
+            animation: redStatusLeft 10s ease-in-out infinite;
+        }
+
+        @keyframes redStatusRight {
+            0%{transform: rotate(0deg);}
+          50%{transform: rotate(-10deg);}
+          100%{transform: rotate(0deg);}
+        }
+
+        @keyframes redStatusLeft {
+            0%{transform: rotate(0deg);}
+          50%{transform: rotate(10deg);}
+          100%{transform: rotate(0deg);}
+        }
+    </style>
+</head>
+<body>
+    <h1>Katzenanimation</h1>
+
+    <img id="yellowHead" src="./katzenimages/yellowHead.png" alt="">
+
+    <div id="yellowStatusBar">placeHolder</div>
+
+    <img id="greenHead" src="./katzenimages/greenHead.png" alt="">
+
+    <div id="greenMouth">....</div>
+
+    <img id="redHead" src="./katzenimages/redHead.png" alt="">
+
+    <div id="redStatusBarRight">brows</div>
+
+    <div id="redStatusBarLeft">brows</div>
+</body>
+</html>
