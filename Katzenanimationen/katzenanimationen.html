@@ -31,14 +31,22 @@
             -moz-border-radius: 0px 0px 171px 171px;
             position: absolute;
             left: 18.2vw;
+            bottom: 74.8vh;
+            animation: greenStatus 2.2s ease-in-out infinite;
+        }
+
+        #toungePiece{
+            color: rgba(255, 255, 255, 0);
+            background-color: #f56464;
+            position: absolute;
+            left: 18.2vw;
             bottom: 75.8vh;
-            animation: greenStatus 10s ease-in-out infinite;
         }
 
         @keyframes greenStatus {
-          0%{transform: rotate(0deg);}
-          50%{transform: rotate(-5deg);}
-          100%{transform: rotate(0deg);}
+          0%{transform: translateY(-0.2vh);}
+          50%{transform: translateY(0vh);}
+          100%{transform: translateY(-0.2vh);}
         }
 
 
@@ -53,22 +61,22 @@
             background-color: #E4D500;
             position: absolute;
             left: 4vw;
-            bottom: 81.8vh;
+            bottom: 82.3vh;
             animation: yellowStatus 10s ease-in-out infinite;
         }
 
         @keyframes yellowStatus {
-            0%{bottom: 81.8vh;}
-            10%{bottom: 81.9vh;}
-            20%{bottom: 82vh;}
-            30%{bottom: 82.1vh;}
-            40%{bottom: 82.2vh;}
-            50%{bottom: 82.3vh;}
-            60%{bottom: 82.2vh;}
-            70%{bottom: 82.1vh}
-            80%{bottom: 82vh;}
-            90%{bottom: 81.9vh;}
-            100%{bottom: 81.8vh;}
+            0%{transform: translateY(0.1vh);}
+            10%{transform: translateY(0.2vh);}
+            20%{transform: translateY(0.3vh);}
+            30%{transform: translateY(0.4vh);}
+            40%{transform: translateY(0.5vh);}
+            50%{transform: translateY(0.5vh);}
+            60%{transform: translateY(0.5vh);}
+            70%{transform: translateY(0.4vh);}
+            80%{transform: translateY(0.3vh);}
+            90%{transform: translateY(0.2vh);}
+            100%{transform: translateY(0.1vh);}
         }
 
 
@@ -84,7 +92,7 @@
             position: absolute;
             left: 30.5vw;
             bottom: 81.8vh;
-            animation: redStatusRight 10s ease-in-out infinite;
+            animation: redStatusRight 4s ease-in-out infinite;
         }
 
         #redStatusBarLeft{
@@ -93,7 +101,7 @@
             position: absolute;
             left: 28.2vw;
             bottom: 81.8vh;
-            animation: redStatusLeft 10s ease-in-out infinite;
+            animation: redStatusLeft 4s ease-in-out infinite;
         }
 
         @keyframes redStatusRight {
@@ -112,15 +120,17 @@
 <body>
     <h1>Katzenanimation</h1>
 
-    <img id="yellowHead" src="./katzenimages/yellowHead.png" alt="">
+    <img id="yellowHead" src="./katzenStatusKöpfe/yellowHead.png" alt="">
 
     <div id="yellowStatusBar">placeHolder</div>
 
-    <img id="greenHead" src="./katzenimages/greenHead.png" alt="">
+    <img id="greenHead" src="./katzenStatusKöpfe/greenHead.png" alt="">
 
     <div id="greenMouth">....</div>
 
-    <img id="redHead" src="./katzenimages/redHead.png" alt="">
+    <div id="toungePiece">....</div>
+
+    <img id="redHead" src="./katzenStatusKöpfe/redHead.png" alt="">
 
     <div id="redStatusBarRight">brows</div>
 
