@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katzenanimation Prototyp</title>
     <style>
-        body{
+        body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: rgb(60, 141, 234);
         }
 
-        h1{
+        h1 {
             text-align: center;
         }
 
@@ -18,12 +19,12 @@
         /* Statusköpfe */
 
         /* Green Status Head */
-        #greenHead{
+        #greenHead {
             max-width: auto;
             max-height: 20vh;
         }
 
-        #greenMouth{
+        #greenMouth {
             color: rgba(255, 255, 255, 0);
             background-color: #f56464;
             border-radius: 0px 0px 171px 171px;
@@ -32,10 +33,10 @@
             position: absolute;
             left: 18.2vw;
             bottom: 74.8vh;
-            animation: greenStatus 2.2s ease-in-out infinite;
+            animation: greenStatus 1.2s ease-in-out infinite;
         }
 
-        #toungePiece{
+        #toungePiece {
             color: rgba(255, 255, 255, 0);
             background-color: #f56464;
             position: absolute;
@@ -44,19 +45,27 @@
         }
 
         @keyframes greenStatus {
-          0%{transform: translateY(-0.2vh);}
-          50%{transform: translateY(0vh);}
-          100%{transform: translateY(-0.2vh);}
+            0% {
+                transform: translateY(-0.2vh);
+            }
+
+            50% {
+                transform: translateY(0vh);
+            }
+
+            100% {
+                transform: translateY(-0.2vh);
+            }
         }
 
 
         /* Yellow Status Head */
-        #yellowHead{
+        #yellowHead {
             max-width: auto;
             max-height: 20vh;
         }
 
-        #yellowStatusBar{
+        #yellowStatusBar {
             color: rgba(255, 255, 255, 0);
             background-color: #E4D500;
             position: absolute;
@@ -66,27 +75,59 @@
         }
 
         @keyframes yellowStatus {
-            0%{transform: translateY(0.1vh);}
-            10%{transform: translateY(0.2vh);}
-            20%{transform: translateY(0.3vh);}
-            30%{transform: translateY(0.4vh);}
-            40%{transform: translateY(0.5vh);}
-            50%{transform: translateY(0.5vh);}
-            60%{transform: translateY(0.5vh);}
-            70%{transform: translateY(0.4vh);}
-            80%{transform: translateY(0.3vh);}
-            90%{transform: translateY(0.2vh);}
-            100%{transform: translateY(0.1vh);}
+            0% {
+                transform: translateY(0.1vh);
+            }
+
+            10% {
+                transform: translateY(0.2vh);
+            }
+
+            20% {
+                transform: translateY(0.3vh);
+            }
+
+            30% {
+                transform: translateY(0.4vh);
+            }
+
+            40% {
+                transform: translateY(0.5vh);
+            }
+
+            50% {
+                transform: translateY(0.5vh);
+            }
+
+            60% {
+                transform: translateY(0.5vh);
+            }
+
+            70% {
+                transform: translateY(0.4vh);
+            }
+
+            80% {
+                transform: translateY(0.3vh);
+            }
+
+            90% {
+                transform: translateY(0.2vh);
+            }
+
+            100% {
+                transform: translateY(0.1vh);
+            }
         }
 
 
         /* Red Status Head */
-        #redHead{
+        #redHead {
             max-width: auto;
             max-height: 20vh;
         }
 
-        #redStatusBarRight{
+        #redStatusBarRight {
             color: rgba(255, 255, 255, 0);
             background-color: #E40000;
             position: absolute;
@@ -95,7 +136,7 @@
             animation: redStatusRight 4s ease-in-out infinite;
         }
 
-        #redStatusBarLeft{
+        #redStatusBarLeft {
             color: rgba(255, 255, 255, 0);
             background-color: #E40000;
             position: absolute;
@@ -105,18 +146,57 @@
         }
 
         @keyframes redStatusRight {
-            0%{transform: rotate(0deg);}
-          50%{transform: rotate(-10deg);}
-          100%{transform: rotate(0deg);}
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
         }
 
         @keyframes redStatusLeft {
-            0%{transform: rotate(0deg);}
-          50%{transform: rotate(10deg);}
-          100%{transform: rotate(0deg);}
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+
+        @media (max-width: 2600px) {
+           #redStatusBarLeft {
+            left: 24.4vw;
+           }
+           #redStatusBarRight {
+            left: 26.4vw;
+           }
+
+           #toungePiece {
+            left: 15.75vw;
+           }
+
+           #greenMouth {
+            left: 15.75vw;
+           }
+
+           #yellowStatusBar {
+                left: 3.5vw;
+           }
         }
     </style>
 </head>
+
 <body>
     <h1>Katzenanimation</h1>
 
@@ -136,4 +216,5 @@
 
     <div id="redStatusBarLeft">brows</div>
 </body>
+
 </html>
