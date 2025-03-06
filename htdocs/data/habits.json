@@ -1,12 +1,33 @@
 {
-    "habits" : [
-        {
-            "name": "Habit 1",
-            "type": "xyz"
-        },
-        {
-            "name": "Habit 2",
-            "type": "abc"
-        }
-    ]
+   "habits": [
+    {
+        "name": "Schlafmangel",
+        "type": "xyz",
+        "icon": "😴",
+        "description": "Zu wenig Schlaf kann die kognitive Leistung und das Wohlbefinden beeinträchtigen.",
+        "priority": "hoch"
+    },
+    {
+        "name": "Bildschirmzeit",
+        "type": "abc",
+        "icon": "📱",
+        "description": "Zu viel Zeit vor Bildschirmen kann die Schlafqualität und Produktivität verringern.",
+        "priority": "mittel"
+    },
+    {
+        "name": "Ernährung",
+        "type": "abc",
+        "icon": "🥗",
+        "description": "Eine unausgewogene Ernährung kann langfristig die Gesundheit beeinträchtigen.",
+        "priority": "hoch"
+    },
+    {
+        "name": "Bewegungsmangel",
+        "type": "abc",
+        "icon": "🚶",
+        "description": "Zu wenig körperliche Aktivität kann das Risiko für verschiedene Krankheiten erhöhen.",
+        "priority": "hoch"
+    }
+]
+
 }
