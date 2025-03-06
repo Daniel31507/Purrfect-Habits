@@ -10,7 +10,8 @@
             padding: 1vw;
             color: #fff;
             font-size: 250%;
-            background-image: url()
+            background-image: url("Katzenanimationen/katzenStatusKöpfe/daquavius.avif");
+            background-size: contain;
         }
         li {
             text-align: justify;
