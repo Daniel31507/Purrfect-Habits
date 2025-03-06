@@ -11,13 +11,31 @@
             color: #fff;
             font-size: 250%;
             background-image: url("Katzenanimationen/katzenStatusKöpfe/daquavius.avif");
-            background-size: contain;
+            background-size: 50px 50px; 
+            background-repeat: repeat;
+            animation: scrollBackground 2s linear infinite;
         }
+        @keyframes scrollBackground {
+        from {
+        background-position: 0 0;
+        }
+        to {
+        background-position: 100px 100px;
+        }
+}
         li {
             text-align: justify;
             width:  25%;
-            background-color: rgba(128, 128, 128, 0.169);
+            background-color: rgba(117, 50, 50, 0.81);
             padding: 0.2vw;
+            border-style: ridge;
+            border-width: 0.3vw;
+            border-color: aqua;
+            transition-duration: 0.3s;
+        }
+        li:hover{
+            background-color: rgba(196, 36, 36, 0.84);
+            border-color: yellow;
         }
         a {
             font-weight: 600;
