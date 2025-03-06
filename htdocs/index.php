@@ -10,6 +10,7 @@
             padding: 1vw;
             color: #fff;
             font-size: 250%;
+            background-image: url()
         }
         li {
             text-align: justify;
