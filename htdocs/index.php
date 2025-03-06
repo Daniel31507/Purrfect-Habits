@@ -10,10 +10,10 @@
             padding: 1vw;
             color: #fff;
             font-size: 250%;
-            background-image: url("Katzenanimationen/katzenStatusKöpfe/daquavius.avif");
-            background-size: 50px 50px; 
+            background-image: url("Katzenanimationen/katzenStatusKöpfe/johnpork.gif");
+            background-size: 100px 100px; 
             background-repeat: repeat;
-            animation: scrollBackground 2s linear infinite;
+            animation: scrollBackground 1.4s linear infinite;
         }
         @keyframes scrollBackground {
         from {
@@ -22,7 +22,7 @@
         to {
         background-position: 100px 100px;
         }
-}
+        }
         li {
             text-align: justify;
             width:  25%;
@@ -60,6 +60,7 @@
             color: orange;
             text-decoration: none;
         }
+
     </style>
 </head>
 <body>
