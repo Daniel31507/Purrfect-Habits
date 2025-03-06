@@ -15,5 +15,5 @@ if (isset($library->habits)) {
     }
 }
 
-echo json_encode($answer, JSON_PRETTY_PRINT);
+echo json_encode($answer);
 ?>
