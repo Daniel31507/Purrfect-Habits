@@ -22,11 +22,11 @@
         }
         50% {
         background-image: url("Katzenanimationen/katzenStatusKöpfe/johnpork.gif");
-        background-position: 100px 100px; /* Bewegung während des Wechsels */
+        background-position: 100px 100px; 
         }
         100% {
         background-image: url("Katzenanimationen/katzenStatusKöpfe/daquavius.avif");
-        background-position: 200px 200px; /* Weiterbewegung */
+        background-position: 200px 200px; 
         }
         }
         
@@ -39,6 +39,18 @@
             border-width: 0.3vw;
             border-color: aqua;
             transition-duration: 0.3s;
+            animation: blinking 2s linear infinite;
+        }
+        @keyframes blinking {
+            0% {
+            background-color: rgba(117, 50, 50, 0.81);
+            }
+            50% {
+            background-color: rgba(43, 194, 16, 0.6);
+            }
+            100% {
+            background-color: rgba(117, 50, 50, 0.81);
+            } 
         }
         li:hover{
             background-color: rgba(196, 36, 36, 0.84);
