@@ -42,6 +42,14 @@
          "description": "Dauerhafter Stress kann die mentale Gesundheit und Leistungsfähigkeit beeinträchtigen.",
          "priority": "hoch"
      }
+     ,
+     {
+         "name": "Prokrastination",
+         "type": "mental",
+         "icon": "⏰",
+         "description": "Probleme oder Aufgaben immer wieder aufzuschieben kann zu Sorgen und Stress führen.",
+         "priority": "hoch"
+     }
     ]
  }
  
