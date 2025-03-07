@@ -2,7 +2,7 @@
     "habits": [
      {
          "name": "Schlafmangel",
-         "type": "schlaf",
+         "type": "gesundheit",
          "icon": "😴",
          "description": "Zu wenig Schlaf kann die kognitive Leistung und das Wohlbefinden beeinträchtigen.",
          "priority": "hoch",
@@ -16,7 +16,7 @@
      },
      {
          "name": "Bildschirmzeit",
-         "type": "körper",
+         "type": "gesundheit",
          "icon": "📱",
          "description": "Zu viel Zeit vor Bildschirmen kann die Schlafqualität und Produktivität verringern.",
          "priority": "mittel",
@@ -44,7 +44,7 @@
      },
      {
          "name": "Bewegungsmangel",
-         "type": "sport",
+         "type": "gesundheit",
          "icon": "🚶",
          "description": "Zu wenig körperliche Aktivität kann das Risiko für verschiedene Krankheiten erhöhen.",
          "priority": "hoch",
