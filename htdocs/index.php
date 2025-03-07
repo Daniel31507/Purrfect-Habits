@@ -13,16 +13,23 @@
             background-image: url("Katzenanimationen/katzenStatusKöpfe/johnpork.gif");
             background-size: 100px 100px; 
             background-repeat: repeat;
-            animation: scrollBackground 1.4s linear infinite;
+            animation: scrollBackground 4s linear infinite;
         }
         @keyframes scrollBackground {
-        from {
+        0% {
+        background-image: url("Katzenanimationen/katzenStatusKöpfe/daquavius.avif");
         background-position: 0 0;
         }
-        to {
-        background-position: 100px 100px;
+        50% {
+        background-image: url("Katzenanimationen/katzenStatusKöpfe/johnpork.gif");
+        background-position: 100px 100px; /* Bewegung während des Wechsels */
+        }
+        100% {
+        background-image: url("Katzenanimationen/katzenStatusKöpfe/daquavius.avif");
+        background-position: 200px 200px; /* Weiterbewegung */
         }
         }
+        
         li {
             text-align: justify;
             width:  25%;
