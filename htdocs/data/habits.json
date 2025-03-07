@@ -71,20 +71,6 @@
          ]
      },
      {
-         "name": "Multitasking",
-         "type": "produktivität",
-         "icon": "🔀",
-         "description": "Zu viel Multitasking kann die Effizienz verringern und die Fehlerquote erhöhen.",
-         "priority": "mittel",
-         "tips": [
-             "Fokussiere dich auf eine Aufgabe zur Zeit.",
-             "Nutze eine To-Do-Liste, um Prioritäten zu setzen.",
-             "Arbeite in Zeitblöcken, z. B. mit der Pomodoro-Technik.",
-             "Eliminiere Ablenkungen während wichtiger Aufgaben.",
-             "Mache bewusste Pausen, um den Fokus zu behalten."
-         ]
-     },
-     {
          "name": "Stress",
          "type": "mental",
          "icon": "⚡",
@@ -96,20 +82,6 @@
              "Reduziere Stressfaktoren durch besseres Zeitmanagement.",
              "Bewege dich regelmäßig, um Stress abzubauen.",
              "Sprich mit Freunden oder Familie über deine Belastungen."
-         ]
-     },
-     {
-         "name": "Aufschieben",
-         "type": "produktivität",
-         "icon": "⏳",
-         "description": "Prokrastination kann zu Zeitdruck und verminderter Arbeitsqualität führen.",
-         "priority": "mittel",
-         "tips": [
-             "Setze dir klare und realistische Ziele.",
-             "Nutze kleine Schritte, um große Aufgaben zu bewältigen.",
-             "Belohne dich für erledigte Aufgaben.",
-             "Eliminiere Ablenkungen während der Arbeit.",
-             "Nutze feste Zeitfenster für produktive Arbeit."
          ]
      },
      {
@@ -132,7 +104,14 @@
          "type": "mental",
          "icon": "⏰",
          "description": "Probleme oder Aufgaben immer wieder aufzuschieben kann zu Sorgen und Stress führen.",
-         "priority": "hoch"
+         "priority": "hoch",
+         "tips": [
+            "Setze dir konkrete Ziele: Formuliere klare und erreichbare Ziele, um die Aufgabe überschaubar zu machen und die Prokrastination zu vermeiden.",
+            "Nutze die 5-Minuten-Regel: Starte eine Aufgabe, indem du dich verpflichtest, nur 5 Minuten daran zu arbeiten. Oft wirst du länger bleiben, wenn du erst einmal angefangen hast.",
+            "Führe eine To-Do-Liste: Halte deine Aufgaben schriftlich fest und arbeite sie systematisch ab. Das Abhaken erledigter Aufgaben gibt dir ein Erfolgserlebnis.",
+            "Arbeite mit Zeitblöcken: Teile deine Arbeit in feste Zeiträume (z. B. Pomodoro-Technik) ein, um dich besser zu fokussieren und die Prokrastination zu überwinden.",
+            "Vermeide Ablenkungen: Schalte Benachrichtigungen aus und schaffe dir eine ruhige Arbeitsumgebung, um konzentriert und effektiv zu bleiben."
+          ]
      }
     ]
  }
