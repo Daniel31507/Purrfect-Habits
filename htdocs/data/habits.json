@@ -126,6 +126,14 @@
              "Sei offen für neue Kontakte und Gelegenheiten zum Austausch."
          ]
      }
+     ,
+     {
+         "name": "Prokrastination",
+         "type": "mental",
+         "icon": "⏰",
+         "description": "Probleme oder Aufgaben immer wieder aufzuschieben kann zu Sorgen und Stress führen.",
+         "priority": "hoch"
+     }
     ]
  }
  
