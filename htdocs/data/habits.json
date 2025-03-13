@@ -1,12 +1,118 @@
 {
-    "habits" : [
-        {
-            "name": "Habit 1",
-            "type": "xyz"
-        },
-        {
-            "name": "Habit 2",
-            "type": "abc"
-        }
+    "habits": [
+     {
+         "name": "Schlafmangel",
+         "type": "gesundheit",
+         "icon": "😴",
+         "description": "Zu wenig Schlaf kann die kognitive Leistung und das Wohlbefinden beeinträchtigen.",
+         "priority": "hoch",
+         "tips": [
+             "Gehe jeden Tag zur gleichen Zeit ins Bett.",
+             "Vermeide Bildschirmzeit mindestens eine Stunde vor dem Schlafen.",
+             "Nutze eine Abendroutine, um dich zu entspannen.",
+             "Sorge für eine angenehme Schlafumgebung (dunkel, kühl, ruhig).",
+             "Vermeide Koffein am späten Nachmittag und Abend."
+         ]
+     },
+     {
+         "name": "Bildschirmzeit",
+         "type": "gesundheit",
+         "icon": "📱",
+         "description": "Zu viel Zeit vor Bildschirmen kann die Schlafqualität und Produktivität verringern.",
+         "priority": "mittel",
+         "tips": [
+             "Mache regelmäßige Pausen von Bildschirmen (z. B. 20-20-20 Regel).",
+             "Nutze Blaulichtfilter oder Nachtmodus am Abend.",
+             "Reduziere Bildschirmzeit vor dem Schlafengehen.",
+             "Plane bildschirmfreie Zeiten, z. B. beim Essen oder in sozialen Runden.",
+             "Nutze alternative Aktivitäten wie Lesen oder Sport."
+         ]
+     },
+     {
+         "name": "Ernährung",
+         "type": "gesundheit",
+         "icon": "🥗",
+         "description": "Eine unausgewogene Ernährung kann langfristig die Gesundheit beeinträchtigen.",
+         "priority": "hoch",
+         "tips": [
+             "Achte auf eine ausgewogene Ernährung mit viel Gemüse und Proteinen.",
+             "Reduziere Zucker und verarbeitete Lebensmittel.",
+             "Trinke ausreichend Wasser über den Tag verteilt.",
+             "Koche öfter selbst, um Kontrolle über Zutaten zu haben.",
+             "Plane deine Mahlzeiten im Voraus, um ungesunde Snacks zu vermeiden."
+         ]
+     },
+     {
+         "name": "Bewegungsmangel",
+         "type": "gesundheit",
+         "icon": "🚶",
+         "description": "Zu wenig körperliche Aktivität kann das Risiko für verschiedene Krankheiten erhöhen.",
+         "priority": "hoch",
+         "tips": [
+             "Baue Bewegung in deinen Alltag ein (z. B. Treppen statt Aufzug).",
+             "Setze dir feste Zeiten für Sport oder Spaziergänge.",
+             "Probiere verschiedene Sportarten, um eine passende zu finden.",
+             "Nutze Stehpausen bei der Arbeit, um Bewegung zu fördern.",
+             "Verknüpfe Bewegung mit Spaß, z. B. durch Musik oder Freunde."
+         ]
+     },
+     {
+         "name": "Wasserzufuhr",
+         "type": "gesundheit",
+         "icon": "💧",
+         "description": "Zu wenig Wasser trinken kann zu Konzentrationsproblemen und Kopfschmerzen führen.",
+         "priority": "mittel",
+         "tips": [
+             "Trinke ein Glas Wasser direkt nach dem Aufstehen.",
+             "Nutze eine Trinkflasche, um deinen Wasserkonsum im Blick zu behalten.",
+             "Setze dir Erinnerungen, um regelmäßig Wasser zu trinken.",
+             "Geschmacksvarianten wie Zitronenwasser können helfen.",
+             "Ersetze Softdrinks und Kaffee öfter durch Wasser."
+         ]
+     },
+     {
+         "name": "Stress",
+         "type": "mental",
+         "icon": "⚡",
+         "description": "Dauerhafter Stress kann die mentale Gesundheit und Leistungsfähigkeit beeinträchtigen.",
+         "priority": "hoch",
+         "tips": [
+             "Nutze Atemtechniken zur schnellen Entspannung.",
+             "Plane bewusste Entspannungszeiten ein (z. B. Meditation).",
+             "Reduziere Stressfaktoren durch besseres Zeitmanagement.",
+             "Bewege dich regelmäßig, um Stress abzubauen.",
+             "Sprich mit Freunden oder Familie über deine Belastungen."
+         ]
+     },
+     {
+         "name": "Soziale Isolation",
+         "type": "mental",
+         "icon": "🏠",
+         "description": "Wenig soziale Kontakte können das Wohlbefinden und die mentale Gesundheit beeinträchtigen.",
+         "priority": "hoch",
+         "tips": [
+             "Plane regelmäßige Treffen mit Freunden oder Familie.",
+             "Nimm an Gruppenaktivitäten oder Vereinen teil.",
+             "Nutze Videoanrufe, wenn persönliche Treffen nicht möglich sind.",
+             "Baue kleine soziale Interaktionen in deinen Alltag ein.",
+             "Sei offen für neue Kontakte und Gelegenheiten zum Austausch."
+         ]
+     }
+     ,
+     {
+         "name": "Prokrastination",
+         "type": "mental",
+         "icon": "⏰",
+         "description": "Probleme oder Aufgaben immer wieder aufzuschieben kann zu Sorgen und Stress führen.",
+         "priority": "hoch",
+         "tips": [
+            "Setze dir konkrete Ziele: Formuliere klare und erreichbare Ziele, um die Aufgabe überschaubar zu machen und die Prokrastination zu vermeiden.",
+            "Nutze die 5-Minuten-Regel: Starte eine Aufgabe, indem du dich verpflichtest, nur 5 Minuten daran zu arbeiten. Oft wirst du länger bleiben, wenn du erst einmal angefangen hast.",
+            "Führe eine To-Do-Liste: Halte deine Aufgaben schriftlich fest und arbeite sie systematisch ab. Das Abhaken erledigter Aufgaben gibt dir ein Erfolgserlebnis.",
+            "Arbeite mit Zeitblöcken: Teile deine Arbeit in feste Zeiträume (z. B. Pomodoro-Technik) ein, um dich besser zu fokussieren und die Prokrastination zu überwinden.",
+            "Vermeide Ablenkungen: Schalte Benachrichtigungen aus und schaffe dir eine ruhige Arbeitsumgebung, um konzentriert und effektiv zu bleiben."
+          ]
+     }
     ]
-}
+ }
+ 
