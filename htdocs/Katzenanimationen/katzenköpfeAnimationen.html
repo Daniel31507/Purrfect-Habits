@@ -19,9 +19,20 @@
         /* Statusköpfe */
 
         /* Green Status Head */
+        #greenAnim{
+            position: absolute;
+            left: 10vw;
+        }
+
         #greenHead {
             max-width: auto;
             max-height: 20vh;
+        }
+
+        #wholeGreenMouth{
+            position: relative;
+            bottom: 7vh;
+            
         }
 
         #greenMouth {
@@ -30,36 +41,45 @@
             border-radius: 0px 0px 171px 171px;
             -webkit-border-radius: 0px 0px 171px 171px;
             -moz-border-radius: 0px 0px 171px 171px;
-            position: absolute;
-            left: 18.2vw;
-            bottom: 74.8vh;
+            position: relative;
+            left: 9.8vh;
+            top: 1vh;
+            width: 1em;
             animation: greenStatus 1.2s ease-in-out infinite;
         }
 
         #toungePiece {
             color: rgba(255, 255, 255, 0);
             background-color: #f56464;
-            position: absolute;
-            left: 18.2vw;
-            bottom: 75.8vh;
+            height: 0.5em;
+            position: relative;
+            left: 9.8vh;
+            bottom: 2.2vh;
+            width: 1em;
+            
         }
 
         @keyframes greenStatus {
             0% {
-                transform: translateY(-0.2vh);
+                transform: translateY(-0.3vh);
             }
 
             50% {
-                transform: translateY(0vh);
+                transform: translateY(0.2vh);
             }
 
             100% {
-                transform: translateY(-0.2vh);
+                transform: translateY(-0.3vh);
             }
         }
 
 
         /* Yellow Status Head */
+        #yellowAnim{
+            position: absolute;
+            left: 0vw;
+        }
+
         #yellowHead {
             max-width: auto;
             max-height: 20vh;
@@ -69,59 +89,37 @@
             color: rgba(255, 255, 255, 0);
             background-color: #E4D500;
             position: absolute;
-            left: 4vw;
-            bottom: 82.3vh;
-            animation: yellowStatus 10s ease-in-out infinite;
+            height: 6%;
+            width: 40%;
+            left: 30%;
+            top: 35%;
+            /* border: red 1px solid; */
+            /* left: 4vw;
+            bottom: 82.3vh; */
+            animation: yellowStatus 3s ease-in-out infinite;
         }
 
         @keyframes yellowStatus {
             0% {
-                transform: translateY(0.1vh);
+                transform: translateY(0);
             }
-
-            10% {
-                transform: translateY(0.2vh);
-            }
-
-            20% {
-                transform: translateY(0.3vh);
-            }
-
-            30% {
-                transform: translateY(0.4vh);
-            }
-
-            40% {
-                transform: translateY(0.5vh);
-            }
-
             50% {
-                transform: translateY(0.5vh);
+                transform: translateY(50%);
             }
-
-            60% {
-                transform: translateY(0.5vh);
-            }
-
-            70% {
-                transform: translateY(0.4vh);
-            }
-
-            80% {
-                transform: translateY(0.3vh);
-            }
-
-            90% {
-                transform: translateY(0.2vh);
-            }
-
             100% {
-                transform: translateY(0.1vh);
+                transform: translateY(0);
+
             }
         }
+        
 
 
         /* Red Status Head */
+        #redAnim{
+            position: absolute;
+            left: 20vw;
+        }
+
         #redHead {
             max-width: auto;
             max-height: 20vh;
@@ -131,18 +129,25 @@
             color: rgba(255, 255, 255, 0);
             background-color: #E40000;
             position: absolute;
-            left: 30.5vw;
-            bottom: 81.8vh;
-            animation: redStatusRight 4s ease-in-out infinite;
+            top: 37%;
+            left: 47%;
+            width: 20%;
+            height: 7%;
+            animation: redStatusRight 2.5s ease-in-out infinite; 
+            /* border: white 1px solid; */
         }
 
         #redStatusBarLeft {
             color: rgba(255, 255, 255, 0);
             background-color: #E40000;
             position: absolute;
-            left: 28.2vw;
-            bottom: 81.8vh;
-            animation: redStatusLeft 4s ease-in-out infinite;
+            top: 37%;
+            left: 33%;
+            width: 20%;
+            height: 7%;
+            animation: redStatusLeft 2.5s ease-in-out infinite;
+            /* border: white 1px solid; */
+
         }
 
         @keyframes redStatusRight {
@@ -151,7 +156,7 @@
             }
 
             50% {
-                transform: rotate(-10deg);
+                transform: rotate(-15deg);
             }
 
             100% {
@@ -165,7 +170,7 @@
             }
 
             50% {
-                transform: rotate(10deg);
+                transform: rotate(15deg);
             }
 
             100% {
@@ -174,7 +179,7 @@
         }
 
 
-        @media (max-width: 2600px) {
+        /* @media (max-width: 2600px) {
            #redStatusBarLeft {
             left: 24.4vw;
            }
@@ -193,28 +198,37 @@
            #yellowStatusBar {
                 left: 3.5vw;
            }
-        }
+        } */
     </style>
 </head>
 
 <body>
     <h1>Katzenanimation</h1>
 
-    <img id="yellowHead" src="./katzenStatusKöpfe/yellowHead.png" alt="">
+    <div id="yellowAnim">
+        <img id="yellowHead" src="./katzenStatusKöpfe/yellowHead.png" alt="">
 
-    <div id="yellowStatusBar">placeHolder</div>
+        <div id="yellowStatusBar">placeHolder</div>
+    </div>
 
-    <img id="greenHead" src="./katzenStatusKöpfe/greenHead.png" alt="">
+    <div id="greenAnim">
+        <img id="greenHead" src="./katzenStatusKöpfe/greenHead.png" alt="">
 
-    <div id="greenMouth">....</div>
+        <div id="wholeGreenMouth">
+            <div id="greenMouth">....</div>
+    
+            <div id="toungePiece">....</div>
+        </div>
 
-    <div id="toungePiece">....</div>
+    </div>
+    
+    <div id="redAnim">
+        <img id="redHead" src="./katzenStatusKöpfe/redHead.png" alt="">
 
-    <img id="redHead" src="./katzenStatusKöpfe/redHead.png" alt="">
-
-    <div id="redStatusBarRight">brows</div>
-
-    <div id="redStatusBarLeft">brows</div>
+        <div id="redStatusBarRight">brows</div>
+    
+        <div id="redStatusBarLeft">brows</div>
+    </div>
 </body>
 
 </html>
