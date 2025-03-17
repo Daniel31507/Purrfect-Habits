@@ -103,19 +103,20 @@ body {
 
 #r_element1 {
     position: fixed;
-    bottom: -50%;
-    right: -25%;
-    width: 50vw;
+    bottom: -55%;
+    right: -35%;
+    width: 60vw;
     aspect-ratio: 1;
     border-radius: 100%;
     background-color: #800000; 
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -100;
 }
 
 #r_element2 {
-    width: 45vw;
+    width: 55vw;
     aspect-ratio: 1;
     border-radius: 100%;
     background-color: #A52A2A; 
@@ -125,7 +126,7 @@ body {
 }
 
 #r_element3 {
-    width: 40vw;
+    width: 50vw;
     aspect-ratio: 1;
     border-radius: 100%;
     background-color: #CD5C5C;
