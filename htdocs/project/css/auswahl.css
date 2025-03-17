@@ -29,6 +29,9 @@ body{
     margin-bottom: 3%;
     border-radius: 30px;
 }
+.habitBox:nth-child(1){
+    margin-top: 0.5%;
+}
 #scrollbar1::-webkit-scrollbar {
     width: 0.6vw;
 }
@@ -45,3 +48,9 @@ body{
 }
 
 
+@media (min-width: 1600px) {
+    .window{
+        margin-top: 22vh;
+        height: 35vh;
+    }
+}
