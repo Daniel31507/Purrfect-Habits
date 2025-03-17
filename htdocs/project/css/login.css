@@ -63,6 +63,29 @@ body {
     width: 12vw;
     aspect-ratio: 1;
 }
+#imgBox{
+    position: relative;
+}
+#eye1{
+    position: absolute;
+    top: 37.5%;
+    left: 30%;
+    width: 1vw;
+    aspect-ratio: 1;
+    background-color: black;
+    border-radius: 100%;
+    z-index: 1000;
+}
+#eye2{
+    position: absolute;
+    top: 37.5%;
+    left: 55%;
+    width: 1vw;
+    aspect-ratio: 1;
+    background-color: black;
+    border-radius: 100%;
+    z-index: 1000;
+}
 
 
 #login {

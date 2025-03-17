@@ -18,7 +18,9 @@
     <div id="content">
         <div id="logregBox">
             <div id="imgBox">
-                <img src="../img/katze.png">
+                <img src="../img/katze2.png">
+                <div id="eye1"></div>
+                <div id="eye2"></div>
             </div>
 
             <div id="login" onclick="start(1)">

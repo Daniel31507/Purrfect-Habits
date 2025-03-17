@@ -1,3 +1,28 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const eye1 = document.getElementById("eye1");
+    const eye2 = document.getElementById("eye2");
+    const cat = document.getElementById("imgBox");
+
+    document.addEventListener("mousemove", (event) => {
+        const catRect = cat.getBoundingClientRect();
+        const catCenterX = catRect.left + catRect.width / 2;
+        const catCenterY = catRect.top + catRect.height / 2;
+
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        const angle = Math.atan2(mouseY - catCenterY, mouseX - catCenterX);
+
+        const maxOffset = 10;
+
+        const offsetX = Math.cos(angle) * maxOffset;
+        const offsetY = Math.sin(angle) * maxOffset;
+
+        eye1.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        eye2.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    });
+});
+
 let html;
 
 function start(id) {
