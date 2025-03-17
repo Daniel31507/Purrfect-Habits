@@ -12,10 +12,8 @@
 </head>
 <body>
 
-    <div id="window">
-    <div id="scrollbar1">
+    <div class="window" id="scrollbar1">
     <div id="boxes"></div>
-    </div>
     </div>
 </body>
 </html>
