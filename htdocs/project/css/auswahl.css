@@ -43,7 +43,7 @@ body{
 }
 
 #scrollbar1::-webkit-scrollbar-thumb {
-    border-radius: 8px;
+    border-radius: 8vw;
     background-color: #0178ff82;
 }
 
