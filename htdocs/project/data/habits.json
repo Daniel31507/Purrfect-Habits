@@ -5,7 +5,6 @@
          "type": "gesundheit",
          "icon": "😴",
          "description": "Zu wenig Schlaf kann die kognitive Leistung und das Wohlbefinden beeinträchtigen.",
-         "priority": "hoch",
          "tips": [
              "Gehe jeden Tag zur gleichen Zeit ins Bett.",
              "Vermeide Bildschirmzeit mindestens eine Stunde vor dem Schlafen.",
@@ -19,7 +18,6 @@
          "type": "gesundheit",
          "icon": "📱",
          "description": "Zu viel Zeit vor Bildschirmen kann die Schlafqualität und Produktivität verringern.",
-         "priority": "mittel",
          "tips": [
              "Mache regelmäßige Pausen von Bildschirmen (z. B. 20-20-20 Regel).",
              "Nutze Blaulichtfilter oder Nachtmodus am Abend.",
@@ -33,7 +31,6 @@
          "type": "gesundheit",
          "icon": "🥗",
          "description": "Eine unausgewogene Ernährung kann langfristig die Gesundheit beeinträchtigen.",
-         "priority": "hoch",
          "tips": [
              "Achte auf eine ausgewogene Ernährung mit viel Gemüse und Proteinen.",
              "Reduziere Zucker und verarbeitete Lebensmittel.",
@@ -47,7 +44,6 @@
          "type": "gesundheit",
          "icon": "🚶",
          "description": "Zu wenig körperliche Aktivität kann das Risiko für verschiedene Krankheiten erhöhen.",
-         "priority": "hoch",
          "tips": [
              "Baue Bewegung in deinen Alltag ein (z. B. Treppen statt Aufzug).",
              "Setze dir feste Zeiten für Sport oder Spaziergänge.",
@@ -61,7 +57,6 @@
          "type": "gesundheit",
          "icon": "💧",
          "description": "Zu wenig Wasser trinken kann zu Konzentrationsproblemen und Kopfschmerzen führen.",
-         "priority": "mittel",
          "tips": [
              "Trinke ein Glas Wasser direkt nach dem Aufstehen.",
              "Nutze eine Trinkflasche, um deinen Wasserkonsum im Blick zu behalten.",
@@ -75,7 +70,6 @@
          "type": "mental",
          "icon": "⚡",
          "description": "Dauerhafter Stress kann die mentale Gesundheit und Leistungsfähigkeit beeinträchtigen.",
-         "priority": "hoch",
          "tips": [
              "Nutze Atemtechniken zur schnellen Entspannung.",
              "Plane bewusste Entspannungszeiten ein (z. B. Meditation).",
@@ -89,7 +83,6 @@
          "type": "mental",
          "icon": "🏠",
          "description": "Wenig soziale Kontakte können das Wohlbefinden und die mentale Gesundheit beeinträchtigen.",
-         "priority": "hoch",
          "tips": [
              "Plane regelmäßige Treffen mit Freunden oder Familie.",
              "Nimm an Gruppenaktivitäten oder Vereinen teil.",
@@ -104,7 +97,6 @@
          "type": "mental",
          "icon": "⏰",
          "description": "Probleme oder Aufgaben immer wieder aufzuschieben kann zu Sorgen und Stress führen.",
-         "priority": "hoch",
          "tips": [
             "Setze dir konkrete Ziele: Formuliere klare und erreichbare Ziele, um die Aufgabe überschaubar zu machen und die Prokrastination zu vermeiden.",
             "Nutze die 5-Minuten-Regel: Starte eine Aufgabe, indem du dich verpflichtest, nur 5 Minuten daran zu arbeiten. Oft wirst du länger bleiben, wenn du erst einmal angefangen hast.",
