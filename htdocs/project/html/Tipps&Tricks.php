@@ -17,5 +17,9 @@
 
 <div id="datum"></div>
 
+<div id="arrowButton">&#8678</div>
+
+<!-- pfeil nach rechts: &#8680 -->
+
 </body>
 </html>

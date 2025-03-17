@@ -16,6 +16,20 @@ body{
     font-size: 1.2vw;
 }
 
+#arrowButton{
+    color: rgb(142, 4, 4);
+    position: absolute;
+    top: 30vh;
+    font-size: 9vw;
+    transition-duration: 0.4s;
+}
+
+#arrowButton:hover{
+    cursor: pointer;
+    color: rgb(210, 15, 15);
+    scale: 1.2;
+}
+
 #datum{
     color: white;
     position: absolute;
