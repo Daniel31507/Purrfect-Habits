@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API TEST</title>
-    <script src="../js/fetchAPI.js" defer></script>
+    <?php
+    echo '<script  src="../js/fetchAPI.js'    . '?' . time() . '" defer></script>';
+    ?>
 </head>
+
 <body>
-        <h1>API TEST</h1>
+    <h1>API TEST</h1>
 
-        <div id="content">
-            
-        </div>
+    <div id="content">
+
+    </div>
 
 
 
-    
+
 </body>
+
 </html>

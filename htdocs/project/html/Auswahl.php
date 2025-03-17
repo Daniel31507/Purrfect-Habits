@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habits| Purrfect Habits</title>
     <?php
-    
-        echo '<script  src="../js/fetchAPI.js'    . '?' . time() . '" defer></script>';
+        echo '<link    href="../css/auswahl.css'   . '?' . time() . '" rel="stylesheet">';
     ?>
 </head>
 <body>
