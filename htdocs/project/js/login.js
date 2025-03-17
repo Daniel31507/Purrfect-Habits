@@ -4,10 +4,10 @@ function start(id) {
     if (id == 1) {
         html = `
          <div id="input1">
-               <input type="text" id="name" placeholder="Enter your Name">
+               <input type="text" id="name" placeholder="Name">
             </div>
             <div id="input2">
-                <input type="text" id="pwd" placeholder="Enter your Password">
+                <input type="text" id="pwd" placeholder="Passwort">
             </div>
         
         
@@ -17,7 +17,7 @@ function start(id) {
                 </div>
 
                 <div id="opt2" onclick="returnClicked()">
-                <p> Return </p> 
+                <p> Zurück </p> 
                 </div>
             </div>
         `
@@ -28,28 +28,28 @@ function start(id) {
             html = `
     
              <div id="input1">
-                   <input type="text" id="name" placeholder="Enter your Name">
+                   <input type="text" id="name" placeholder="Name">
                 </div>
                 <div id="input2">
-                    <input type="text" id="pwd" placeholder="Enter your Password">
+                    <input type="text" id="pwd" placeholder="Passwort">
                 </div>
             
             
                 <div id="options">
                     <div id="opt1">
-                    <p>Register</p>
+                    <p>Registrieren</p>
                     </div>
     
                     <div id="opt2" onclick="returnClicked()">
-                    <p> Return </p> 
+                    <p> Zurück </p> 
                     </div>
                 </div>
             `
     
             document.getElementById('logregBox').innerHTML = html;
-        
+ 
     }
-
+    document.getElementById('logregBox').style.height = '55vh';
 }
 
 function returnClicked() {
@@ -67,6 +67,6 @@ function returnClicked() {
             </div>
     
     `
-
+    document.getElementById('logregBox').style.height = '62.5vh';
     document.getElementById('logregBox').innerHTML = html;
 }
