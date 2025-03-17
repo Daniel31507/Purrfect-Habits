@@ -23,9 +23,9 @@ function start(id) {
         `
 
         document.getElementById('logregBox').innerHTML = html;
-    } else if(id == 2) {
-  
-            html = `
+    } else if (id == 2) {
+
+        html = `
     
              <div id="input1">
                    <input type="text" id="name" placeholder="Name">
@@ -36,7 +36,7 @@ function start(id) {
             
             
                 <div id="options">
-                    <div id="opt1">
+                    <div id="opt1" onclick="register()">
                     <p>Registrieren</p>
                     </div>
     
@@ -45,9 +45,9 @@ function start(id) {
                     </div>
                 </div>
             `
-    
-            document.getElementById('logregBox').innerHTML = html;
- 
+
+        document.getElementById('logregBox').innerHTML = html;
+
     }
     document.getElementById('logregBox').style.height = '55vh';
 }
@@ -74,35 +74,69 @@ function returnClicked() {
 
 
 function login() {
-        let user = document.querySelector('#name').value;
-        let pw = document.querySelector('#pwd').value;
-    
-        if (user != '' && pw != '') {
-            let formData = new FormData();
-            formData.append('user', user);
-            formData.append('password', pw);
-    
-            let fetch_URL = '../api/login.php';
-            let fetch_CONFIG = {
-                method: "POST",
-                body: formData
-            }
-    
-            fetch(fetch_URL, fetch_CONFIG)
-                .then((response) => { return response.json(); })
-                .then((data) => {
-                    console.log(data);
-    
-                    if (data.code == 200) {
-                       window.location.href = '../html/Main.html'
-                    } else {
-                        alert("Falsche Anmeldedaten");
-                    }
-                })
-                .catch((error) => {
-                    console.error('Fetch error:', error);
-                });
-        } else {
-            console.log('Fehler');
+    let user = document.querySelector('#name').value;
+    let pw = document.querySelector('#pwd').value;
+
+    if (user != '' && pw != '') {
+        let formData = new FormData();
+        formData.append('user', user);
+        formData.append('password', pw);
+
+        let fetch_URL = '../api/login.php';
+        let fetch_CONFIG = {
+            method: "POST",
+            body: formData
         }
+
+        fetch(fetch_URL, fetch_CONFIG)
+            .then((response) => { return response.json(); })
+            .then((data) => {
+                console.log(data);
+
+                if (data.code == 200) {
+                    window.location.href = '../html/Main.html'
+                } else {
+                    alert("Falsche Anmeldedaten");
+                }
+            })
+            .catch((error) => {
+                console.error('Fetch error:', error);
+            });
+    } else {
+        console.log('Fehler');
     }
+}
+
+function register() {
+    let user = document.querySelector('#name').value;
+    let pw = document.querySelector('#pwd').value;
+
+    if (user != '' && pw != '') {
+        let formData = new FormData();
+        formData.append('user', user);
+        formData.append('password', pw);
+
+        let fetch_URL = '../api/register.php';
+        let fetch_CONFIG = {
+            method: "POST",
+            body: formData
+        }
+
+        fetch(fetch_URL, fetch_CONFIG)
+            .then((response) => { return response.json(); })
+            .then((data) => {
+                console.log(data);
+
+                if (data.code == 200) {
+                   window.location.href = '../html/Main.html'
+                } else {
+                    alert("Falsche Anmeldedaten");
+                }
+            })
+            .catch((error) => {
+                console.error('Fetch error:', error);
+            });
+    } else {
+        console.log('Fehler');
+    }
+}
