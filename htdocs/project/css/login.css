@@ -12,8 +12,9 @@ body {
 
 
 #title {
+    padding-top: 2.5vh;
     width: 100vw;
-    height: 20vh;
+    height: 17.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +22,8 @@ body {
 }
 
 #title img{
-    width: 32.5vw;
-    height: 17.5vh;
+    width: 35vw;
+    height: 40vh;
 }
 
 #content {
