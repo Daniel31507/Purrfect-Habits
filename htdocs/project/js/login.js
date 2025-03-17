@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const angle = Math.atan2(mouseY - catCenterY, mouseX - catCenterX);
 
-        const maxOffset = 10;
+        const maxOffset = 7;
 
         const offsetX = Math.cos(angle) * maxOffset;
         const offsetY = Math.sin(angle) * maxOffset;
