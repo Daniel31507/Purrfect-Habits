@@ -4,7 +4,7 @@ $file_path = "../data/users.json";
 
 $answer = array(
     "code" => 404,
-    "message" => "Not registered"
+    "message" => "Already registered"
 );
 
 if (isset($_POST["user"]) && isset($_POST["password"])) {
