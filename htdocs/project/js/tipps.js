@@ -14,3 +14,8 @@ function getCurrentTimeAndDay() {
 setInterval(function() {
     document.getElementById('datum').innerHTML = getCurrentTimeAndDay();
 }, 1000);
+
+
+function arrowButton(){
+    window.location.href = "../html/Hauptseite.php";
+}
