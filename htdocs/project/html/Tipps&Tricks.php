@@ -10,11 +10,9 @@
     ?>
 </head>
 <body>
-<h1>Tipps & Tricks</h1>
-
 
 <div id="bubble">
-    Hier steht ein hilfreicher Tipp oder ein Trick um deine Angewohnheit zu verbessern
+    Hier steht ein hilfreicher Tipp oder ein Trick <br> um deine Angewohnheit zu verbessern.
 </div>
 
 <div id="datum"></div>
