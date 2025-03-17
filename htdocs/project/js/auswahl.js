@@ -9,7 +9,7 @@ function getAllHabits() {
                     let habit = data.habits[i];
                     html += `
                     <div class="habitBox">
-                        <input type="radio" id="habit_${i}" name="habit_selection" value="${habit.name}">
+                        <input type="radio" onclick="show(${i})" id="habit_${i}" name="habit_selection" value="${habit.name}">
                         <label for="habit_${i}">${habit.icon} ${habit.name}</label>
                     </div>`;
                 }
@@ -21,3 +21,26 @@ function getAllHabits() {
         });
 }
 getAllHabits();
+
+function show(habit) {
+    fetch(`../api/getHabits.php?id=${habit}`)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            
+            let html = "";
+            
+            if (data.code == 200 && data.habits.length > 0) {
+                html = `
+                <div class="icon">
+                    <h1>${data.habits[habit].icon}</h1> <!-- Zugriff auf das erste Element -->
+                </div>`;
+            }
+
+            document.getElementById("iconBox").innerHTML = html;
+        })
+        .catch((error) => {
+            console.error("Fetch error:", error);
+            document.getElementById("iconBox").innerHTML = "<p>Fehler beim Laden.</p>";
+        });
+}

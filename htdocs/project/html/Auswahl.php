@@ -15,5 +15,6 @@
     <div class="window" id="scrollbar1">
     <div id="boxes"></div>
     </div>
+    <div id="iconBox"></div>
 </body>
 </html>
