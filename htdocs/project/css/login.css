@@ -17,11 +17,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5em;
     font-style: italic;
 }
 
-
+#title img{
+    width: 30vw;
+    height: 15vh;
+}
 
 #content {
     width: 100vw;
