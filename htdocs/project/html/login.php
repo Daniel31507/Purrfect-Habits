@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In | Purrfect Habits</title>
-    <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/login.js" defer></script>
+    <?php
+        echo '<link    href="../css/login.css'   . '?' . time() . '" rel="stylesheet">';
+        echo '<script  src="../js/login.js'    . '?' . time() . '" defer></script>';
+    ?>
 </head>
 <body>
     <div id="title">
