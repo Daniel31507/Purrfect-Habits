@@ -1,12 +1,11 @@
 body{
-    background-image: url(../img/AuswahlBackground.jpg);
+    background-image: url(../img/TippsUndTricksBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-#datum{
-    color: white;
+#bubble{
     position: absolute;
-    top: 20vh;
+    color: black;
 }

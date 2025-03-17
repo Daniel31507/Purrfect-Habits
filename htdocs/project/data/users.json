@@ -11,6 +11,10 @@
         {
             "name": "Thomas",
             "pwd": "12345"
+        },
+        {
+            "name": "Russel",
+            "pwd": "sch\u00f6nenGutenTag"
         }
     ]
 }
