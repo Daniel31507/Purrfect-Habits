@@ -94,7 +94,7 @@ function login() {
                 console.log(data);
 
                 if (data.code == 200) {
-                    window.location.href = '../html/Main.html'
+                    window.location.href = '../html/Auswahl.html'
                 } else {
                     alert("Falsche Anmeldedaten");
                 }
@@ -128,7 +128,7 @@ function register() {
                 console.log(data);
 
                 if (data.code == 200) {
-                   window.location.href = '../html/Main.html'
+                   window.location.href = '../html/Auswahl.html'
                 } else {
                     alert("Falsche Anmeldedaten");
                 }
