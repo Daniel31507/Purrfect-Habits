@@ -1,5 +1,5 @@
 function getAllHabits() {
-    fetch('./api/getHabits.php')
+    fetch('../api/getHabits.php')
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
