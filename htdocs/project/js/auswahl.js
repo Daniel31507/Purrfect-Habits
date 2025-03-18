@@ -44,3 +44,5 @@ function show(habit) {
             document.getElementById("iconBox").innerHTML = "<p>Fehler beim Laden.</p>";
         });
 }
+
+

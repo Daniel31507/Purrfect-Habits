@@ -2,19 +2,13 @@
     "users": [
         {
             "name": "admin",
-            "pwd": "admin"
+            "pwd": "admin",
+            "habits": []
         },
         {
-            "name": "user1",
-            "pwd": "password"
-        },
-        {
-            "name": "Thomas",
-            "pwd": "12345"
-        },
-        {
-            "name": "Russel",
-            "pwd": "sch\u00f6nenGutenTag"
+            "name": "Rieser",
+            "pwd": "ayri",
+            "habits": []
         }
     ]
 }

@@ -33,7 +33,7 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
     }
 
     if (!$userExists) {
-        $users['users'][] = array("name" => $user, "pwd" => $password);
+        $users['users'][] = array("name" => $user, "pwd" => $password, "habits" => []);
         file_put_contents($file_path, json_encode($users, JSON_PRETTY_PRINT));
 
         $answer = array(
