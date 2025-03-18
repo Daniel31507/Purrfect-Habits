@@ -94,7 +94,7 @@ input[type="radio"]:checked {
 #iconBox{
     position: fixed;
     width: 15vw;
-    height: 15vh;
+    height: auto;
     left: 67vw;
     bottom: 74.5vh;
     

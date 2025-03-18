@@ -4,7 +4,7 @@
          "name": "Schlafmangel",
          "type": "gesundheit",
          "icon": "😴",
-         "mainIcon": "../img/schlafmangel.png",
+         "mainIcon": "../img/icons/schlafmangel.png",
          "description": "Zu wenig Schlaf kann die kognitive Leistung und das Wohlbefinden beeinträchtigen.",
          "tips": [
              "Gehe jeden Tag zur gleichen Zeit ins Bett.",
@@ -18,7 +18,7 @@
          "name": "Bildschirmzeit",
          "type": "gesundheit",
          "icon": "📱",
-         "mainIcon": "",
+         "mainIcon": "../img/icons/bildschirmzeit.png",
          "description": "Zu viel Zeit vor Bildschirmen kann die Schlafqualität und Produktivität verringern.",
          "tips": [
              "Mache regelmäßige Pausen von Bildschirmen (z. B. 20-20-20 Regel).",
@@ -32,7 +32,7 @@
          "name": "Ernährung",
          "type": "gesundheit",
          "icon": "🥗",
-         "mainIcon": "",
+         "mainIcon": "../img/icons/ernährung.png",
          "description": "Eine unausgewogene Ernährung kann langfristig die Gesundheit beeinträchtigen.",
          "tips": [
              "Achte auf eine ausgewogene Ernährung mit viel Gemüse und Proteinen.",
@@ -46,7 +46,7 @@
          "name": "Bewegungsmangel",
          "type": "gesundheit",
          "icon": "🚶",
-         "mainIcon": "",
+         "mainIcon": "../img/icons/bewegungsmangel.png",
          "description": "Zu wenig körperliche Aktivität kann das Risiko für verschiedene Krankheiten erhöhen.",
          "tips": [
              "Baue Bewegung in deinen Alltag ein (z. B. Treppen statt Aufzug).",
@@ -60,7 +60,7 @@
          "name": "Wasserzufuhr",
          "type": "gesundheit",
          "icon": "💧",
-         "mainIcon": "",
+         "mainIcon": "../img/icons/wasserzufuhr.png",
          "description": "Zu wenig Wasser trinken kann zu Konzentrationsproblemen und Kopfschmerzen führen.",
          "tips": [
              "Trinke ein Glas Wasser direkt nach dem Aufstehen.",
@@ -74,7 +74,7 @@
          "name": "Stress",
          "type": "mental",
          "icon": "⚡",
-         "mainIcon": "",
+         "mainIcon": "../img/icons/stress.png",
          "description": "Dauerhafter Stress kann die mentale Gesundheit und Leistungsfähigkeit beeinträchtigen.",
          "tips": [
              "Nutze Atemtechniken zur schnellen Entspannung.",
@@ -88,7 +88,7 @@
          "name": "Soziale Isolation",
          "type": "mental",
          "icon": "🏠",
-         "mainIcon": "../img/sozialeisolation.png",
+         "mainIcon": "../img/icons/isolation.png",
          "description": "Wenig soziale Kontakte können das Wohlbefinden und die mentale Gesundheit beeinträchtigen.",
          "tips": [
              "Plane regelmäßige Treffen mit Freunden oder Familie.",
@@ -103,7 +103,7 @@
          "name": "Prokrastination",
          "type": "mental",
          "icon": "⏰",
-         "mainIcon": "../img/prokrastination.png",
+         "mainIcon": "../img/icons/prokastination.png",
          "description": "Probleme oder Aufgaben immer wieder aufzuschieben kann zu Sorgen und Stress führen.",
          "tips": [
             "Setze dir konkrete Ziele: Formuliere klare und erreichbare Ziele, um die Aufgabe überschaubar zu machen und die Prokrastination zu vermeiden.",
