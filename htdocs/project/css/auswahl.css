@@ -91,7 +91,7 @@ input[type="radio"]:checked {
     border-color: #222; /* Dunkler Rand für Kontrast */
     scale: 1.1;
 }
-#iconBox{
+#iconBox img{
     position: fixed;
     width: 15vw;
     height: auto;

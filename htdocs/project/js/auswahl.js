@@ -33,7 +33,7 @@ function show(habit) {
             if (data.code == 200 && data.habits.length > 0) {
                 html = `
                 <div class="icon">
-                    <h1>${data.habits[habit].icon}</h1> <!-- Zugriff auf das erste Element -->
+                    <img src="${data.habits[habit].mainIcon}"> <!-- Zugriff auf das erste Element -->
                 </div>`;
             }
 
