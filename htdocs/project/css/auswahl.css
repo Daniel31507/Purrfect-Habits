@@ -1,51 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-body{
+body {
     background-image: url(../img/AuswahlBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Poppins', 'sans-sarif';
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-}
-#boxes{
+#boxes {
     color: white;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
 }
-.window{
-    position: fixed;
-    left: 15vw;
+
+.window {
+    position: relative; /* Statt fixed */
+    left: 0;
     top: 23vh;
     width: 45vw;
     height: 43vh;
-    overflow-y: scroll
+    overflow-y: auto; /* Bessere Scroll-Unterstützung */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.habitBox:nth-child(1){
-    margin-top: 0.5%;
-}
-#scrollbar1::-webkit-scrollbar {
-    width: 0.6vw;
-}
-
-#scrollbar1::-webkit-scrollbar-track {
-    border-radius: 8px;
-    background-color: #e7e7e7;
-    border: 0.1% solid #cacaca;
+.habitBox {
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.459);
+    padding: 1%;
+    margin: 1.5% 5%;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 5% 90%;
 }
 
-#scrollbar1::-webkit-scrollbar-thumb {
-    border-radius: 8vw;
-    background-color: #0178ff82;
+.habitBox label {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
 }
 
-
-@media (min-width: 1600px) {
-    .window{
-        margin-top: 22vh;
-        height: 35vh;
-    }
-}
 .radio-group {
     display: flex;
     flex-direction: column;
@@ -53,52 +56,38 @@ body{
     gap: 10px;
     margin-top: 10px;
 }
-.habitBox {
-    text-align: center;
-    background-color: rgba(0, 0, 255, 0.459);
-    padding: 1%;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 30px;
-    grid-template-columns:5% 90% ;
-    display: grid;
-}
-.habitBox label {
-    display: block;
-    padding: 10px;
-    cursor: pointer;
-}
 
 input[type="radio"] {
-    left: 1vw;
     appearance: none;
-    top: 1.5vh;
     width: 1.5em;
     height: 1.5em;
-    border: 0.2em solid #333; /* Dunkelgrauer Rand */
+    border: 0.2em solid #333;
     border-radius: 50%;
-    background-color: #555; /* Dunkelgrau */
+    background-color: #555;
     display: inline-block;
-    position: relative;
     cursor: pointer;
     transition: background 0.3s, border-color 0.3s;
 }
 
 input[type="radio"]:checked {
-    background-color: rgb(241, 244, 255); /* Blau, wenn gedrückt */
-    border-color: #222; /* Dunkler Rand für Kontrast */
+    background-color: rgb(241, 244, 255);
+    border-color: #222;
     scale: 1.1;
 }
-#iconBox img{
-    position: fixed;
+
+#iconBox img {
+    position: absolute; /* Statt fixed */
     width: 15vw;
     height: auto;
     left: 67vw;
-    bottom: 74.5vh;
-    
+    top: 20vh;
     text-align: center;
     font-size: 2.8em;
 }
 
+@media (min-width: 1600px) {
+    .window {
+        top: 22vh;
+        height: 35vh;
+    }
+}
