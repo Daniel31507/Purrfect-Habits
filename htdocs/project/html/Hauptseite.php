@@ -12,6 +12,10 @@
 <body>
 
 
+<div id="book" onclick="relocateToPage()">
+    <img src="../img/buch.png">
+</div>
+
 <div id="arrowButton" onclick="arrowButton()">&#8680</div>
 </body>
 </html>
