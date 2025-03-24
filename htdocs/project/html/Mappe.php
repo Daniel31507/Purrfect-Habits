@@ -10,8 +10,15 @@
 
 <body>
     <div id="folder">
+        <div id="leftPage">
+
+        </div>
+        <div id="rightPage">
+
+        </div>
         <img src="../img/Mappe.png" alt="Mappe" id="folderImg">
     </div>
+    
     <a href="./Hauptseite.php" id="returnLink">
         <div id="returnButton">
             Zurück

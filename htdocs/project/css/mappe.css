@@ -25,10 +25,19 @@ a{
     height:  100%;
 }
 
+#leftPage{
+
+}
+
+#rightPage{
+
+}
+
 #returnButton{
     background-color: #2e1601;
-    color: #743a06;
+    color: white;
     font-size: 1.5vw;
+    font-weight: 800;
     text-align: center;
     padding: 0.3vw;
     border: 3px #2e1601 solid;
