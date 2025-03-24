@@ -35,6 +35,23 @@ body {
     }
 }
 
+#status {
+    position: fixed;
+    top: 5%;
+    right: 2.5%;
+    width: 10vw;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.329);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#status img{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
 #book {
     position: fixed;
     top: 5%;

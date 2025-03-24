@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hauptseite | Purrfect Habits</title>
     <?php
-        echo '<link    href="../css/hauptseite.css'   . '?' . time() . '" rel="stylesheet">';
-        echo '<script  src="../js/hauptseite.js'    . '?' . time() . '" defer></script>';
+    echo '<link    href="../css/hauptseite.css'   . '?' . time() . '" rel="stylesheet">';
+    echo '<script  src="../js/hauptseite.js'    . '?' . time() . '" defer></script>';
     ?>
 </head>
+
 <body>
 
 
-<div id="book" onclick="relocateToPage()">
-    <img src="../img/buch.png">
-</div>
+    <div id="book" onclick="relocateToPage()">
+        <img src="../img/buch.png">
+    </div>
 
-<div id="arrowButton" onclick="arrowButton()">&#8680</div>
+    <div id="status">
+        <img src="../img/icons/stress.png">
+    </div>
+
+
+    <div class="clock-container">
+        <div class="clock">
+            <div class="hour" id="hour"></div>
+            <div class="minute" id="minute"></div>
+            <div class="second" id="second"></div>
+        </div>
+        <div class="weekday" id="weekday"></div>
+    </div>
+
+    <div id="arrowButton" onclick="arrowButton()">&#8680</div>
 </body>
+
 </html>
