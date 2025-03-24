@@ -11,9 +11,7 @@
 </head>
 <body>
 
-<div id="bubble">
-    Hier steht ein hilfreicher Tipp oder ein Trick <br> um deine Angewohnheit zu verbessern.
-</div>
+<div id="bubble"></div>
 
 <div id="datum"></div>
 
