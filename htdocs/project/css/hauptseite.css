@@ -12,7 +12,6 @@ body {
 }
 
 
-
 #arrowButton {
     position: absolute;
     right: 2%;
@@ -35,3 +34,75 @@ body {
         left: 3%;
     }
 }
+
+#status {
+    position: fixed;
+    top: 5%;
+    right: 2.5%;
+    width: 10vw;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.329);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#status img{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+#book {
+    position: fixed;
+    top: 5%;
+    left: 2.5%;
+    width: 10vw;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.329);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#book::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+#book img{
+    width: 55%;
+    aspect-ratio: 1;
+}
+#book:hover {
+    animation: shake infinite 1s ease-in-out;
+}
+
+
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(4deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    60% {
+        transform: rotate(4deg);
+    }
+    80% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
