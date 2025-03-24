@@ -16,5 +16,7 @@
     <div id="boxes"></div>
     </div>
     <div id="iconBox"></div>
+    <div id="arrowButton" onclick="arrowButton()">&#8680</div>
+
 </body>
 </html>
