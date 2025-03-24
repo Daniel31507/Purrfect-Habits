@@ -1,6 +1,6 @@
 function getCurrentTimeAndDay() {
     const now = new Date();
-
+    
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
 
@@ -10,12 +10,20 @@ function getCurrentTimeAndDay() {
     return `${weekday} ${hours}:${minutes} Uhr`; 
 }
 
+let lastTime = '';
 
-setInterval(function() {
-    document.getElementById('datum').innerHTML = getCurrentTimeAndDay();
-}, 1000);
+function updateTime() {
+    const currentTime = getCurrentTimeAndDay();
 
+    if (currentTime !== lastTime) {
+        document.getElementById('datum').innerHTML = currentTime;
+        lastTime = currentTime;
+    }
 
-function arrowButton(){
+    requestAnimationFrame(updateTime);
+}
+updateTime();
+
+function arrowButton() {
     window.location.href = "../html/Hauptseite.php";
 }
