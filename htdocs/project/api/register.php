@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $file_path = "../data/users.json";
 
 $answer = array(
@@ -40,6 +42,7 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
         }
 
         $newUserId = $highestId + 1;
+        $_SESSION['userId'] = $newUserId;
 
         $users['users'][] = array(
             "id" => $newUserId,

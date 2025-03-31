@@ -45,4 +45,11 @@ function show(habit) {
         });
 }
 
+let userId = sessionStorage.getItem("userId");
+if (userId) {
+    console.log("User ID: " + userId);
+    // Hier kannst du mit der userId weiterarbeiten, z.B. für Habits
+} else {
+    console.log("Keine User ID gefunden.");
+}
 
