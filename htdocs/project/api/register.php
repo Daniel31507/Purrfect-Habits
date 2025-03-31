@@ -24,7 +24,6 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
 
     $userExists = false;
 
-
     foreach ($users['users'] as $currentUser) {
         if ($currentUser['name'] == $user) {
             $userExists = true;
@@ -33,7 +32,22 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
     }
 
     if (!$userExists) {
-        $users['users'][] = array("name" => $user, "pwd" => $password, "habits" => []);
+        $highestId = 0;
+        foreach ($users['users'] as $currentUser) {
+            if (isset($currentUser['id']) && $currentUser['id'] > $highestId) {
+                $highestId = $currentUser['id'];
+            }
+        }
+
+        $newUserId = $highestId + 1;
+
+        $users['users'][] = array(
+            "id" => $newUserId,
+            "name" => $user,
+            "pwd" => $password,
+            "habits" => []
+        );
+
         file_put_contents($file_path, json_encode($users, JSON_PRETTY_PRINT));
 
         $answer = array(

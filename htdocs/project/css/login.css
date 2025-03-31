@@ -57,6 +57,19 @@ body {
     font-weight: 700;
     border-radius: 25px;
     background-color: rgba(119, 30, 30, 0.521);
+    transition-duration: 0.4s;
+}
+
+#register:hover{
+    background-color: rgba(164, 36, 36, 0.521);
+    cursor: pointer;
+    scale: 1.1;
+}
+
+#login:hover{
+    background-color: rgba(164, 36, 36, 0.521);
+    cursor: pointer;
+    scale: 1.1;
 }
 
 #imgBox img{
@@ -179,9 +192,24 @@ body {
     padding: 0% 10%;
     border-radius: 25px;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
+#opt2{
+    margin-left: 1.2vw;
+}
 
+#opt1:hover{
+    background-color: rgba(164, 36, 36, 0.521);
+    cursor: pointer;
+    scale: 1.1;
+}
+
+#opt2:hover{
+    background-color: rgba(164, 36, 36, 0.521);
+    cursor: pointer;
+    scale: 1.1;
+}
 
 input {
     width: 97.5%;

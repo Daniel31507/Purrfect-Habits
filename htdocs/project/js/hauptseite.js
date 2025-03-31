@@ -1,5 +1,5 @@
 function arrowButton(){
-    window.location.href = "../html/Auswahl.php";
+    window.location.href = "../html/Tipps&Tricks.php";
 }
 
 
