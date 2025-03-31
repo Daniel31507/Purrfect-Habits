@@ -12,6 +12,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    overflow: hidden;
 }
 
 
@@ -50,7 +51,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-#status img{
+
+#status img {
     width: 100%;
     aspect-ratio: 1;
 }
@@ -67,6 +69,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #book::before {
     content: "";
     position: absolute;
@@ -78,10 +81,11 @@ body {
     z-index: -1;
 }
 
-#book img{
+#book img {
     width: 55%;
     aspect-ratio: 1;
 }
+
 #book:hover {
     animation: shake infinite 1s ease-in-out;
 }
@@ -92,46 +96,76 @@ body {
     0% {
         transform: rotate(0deg);
     }
+
     20% {
         transform: rotate(4deg);
     }
+
     40% {
         transform: rotate(-4deg);
     }
+
     60% {
         transform: rotate(4deg);
     }
+
     80% {
         transform: rotate(-4deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
 }
 
-.clock {
-    width: 7.5vw;
-    aspect-ratio: 1;
-    border-radius: 100%;
-    background-color: rgb(170, 170, 170);
-    border: 2px solid white;
-    box-shadow: 0 0 30px rgba(245, 245, 245, 0.24);
+.clock{
     position: relative;
-    left: 35%;
-    top: 14%;
+    left: 33%;
+    margin-top: 5%;
+    width: 8vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgba(150, 150, 150, 0.49);
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock span{
-    color: white;
     position: absolute;
-    transform: rotate(calc(30deg * var(--i)));
+    transform: rotate(calc(30deg * var(--i))); 
     inset: 5px;
     text-align: center;
+    color: #fff;
 }
 
-
-.clock span b {
+.clock span b{
     transform: rotate(calc(-30deg * var(--i)));
     display: inline-block;
-    font-size: 1em;
+    font-size: 0.8em;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 0.5vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 0.2vw;
+    height: var(--h);
+    border-radius: 8px;
 }
