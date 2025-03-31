@@ -32,7 +32,7 @@ function start(id) {
                <input type="text" id="name" placeholder="Name">
             </div>
             <div id="input2">
-                <input type="text" id="pwd" placeholder="Passwort">
+                <input type="password" id="pwd" placeholder="Passwort">
             </div>
         
         
@@ -56,7 +56,7 @@ function start(id) {
                    <input type="text" id="name" placeholder="Name">
                 </div>
                 <div id="input2">
-                    <input type="text" id="pwd" placeholder="Passwort">
+                    <input type="password" id="pwd" placeholder="Passwort">
                 </div>
             
             
