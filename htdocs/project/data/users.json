@@ -1,11 +1,13 @@
 {
     "users": [
         {
+            "id": "0",
             "name": "admin",
             "pwd": "admin",
             "habits": []
         },
         {
+            "id": "1",
             "name": "Rieser",
             "pwd": "ayri",
             "habits": []
