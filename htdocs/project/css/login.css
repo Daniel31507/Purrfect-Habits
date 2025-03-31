@@ -118,6 +118,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: pulsating1l 10s linear infinite;
 }
 
 #l_element2 {
@@ -128,6 +129,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: pulsating2l 7s linear infinite;
 }
 
 #l_element3 {
@@ -135,6 +137,7 @@ body {
     aspect-ratio: 1;
     border-radius: 100%;
     background-color: #CD5C5C;
+    animation: pulsating3l 15s linear infinite;
 }
 
 #r_element1 {
@@ -149,6 +152,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: -100;
+    animation: pulsating1r 10s linear infinite;
 }
 
 #r_element2 {
@@ -159,6 +163,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: pulsating2r 7s linear infinite;
 }
 
 #r_element3 {
@@ -166,6 +171,43 @@ body {
     aspect-ratio: 1;
     border-radius: 100%;
     background-color: #CD5C5C;
+    animation: pulsating3r 15s linear infinite;
+}
+
+@keyframes pulsating1r {
+    0%{width: 60vw;}
+    50%{width: 65vw;}
+    100%{width: 60vw;}
+}
+
+@keyframes pulsating2r {
+    0%{width: 55vw;}
+    50%{width: 60vw;}
+    100%{width: 55vw;}
+}
+
+@keyframes pulsating3r {
+    0%{width: 50vw;}
+    50%{width: 55vw;}
+    100%{width: 50vw;}
+}
+
+@keyframes pulsating1l {
+    0%{width: 50vw;}
+    50%{width: 55vw;}
+    100%{width: 50vw;}
+}
+
+@keyframes pulsating2l {
+    0%{width: 45vw;}
+    50%{width: 50vw;}
+    100%{width: 45vw;}
+}
+
+@keyframes pulsating3l {
+    0%{width: 40vw;}
+    50%{width: 45vw;}
+    100%{width: 40vw;}
 }
 
 
