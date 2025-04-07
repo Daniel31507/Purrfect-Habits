@@ -45,7 +45,6 @@ body{
 
 @media (min-width: 1600px) {
     .window{
-        margin-top: 22vh;
         height: 35vh;
     }
 }
