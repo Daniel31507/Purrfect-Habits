@@ -1,7 +1,6 @@
 <?php
 session_start(); 
 
-
 $answer = array(
     "code" => 404,
     "message" => "Not logged in"
@@ -16,16 +15,16 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
 
     foreach ($users['users'] as $currentUser) {
         if ($currentUser['name'] == $user && $currentUser['pwd'] == $password) {
+            $_SESSION['userId'] = $currentUser['id'];
             $answer = array(
                 "code" => 200,
-                "message" => "Logged in successfully"
+                "message" => "Logged in successfully",
+                "userId" => $_SESSION['userId']
             );
-            $_SESSION['userId'] = $currentUser['id'];
             break;
         }
     }
 }
 
 echo json_encode($answer);
-
 ?>

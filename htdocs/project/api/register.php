@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $file_path = "../data/users.json";
@@ -55,11 +54,11 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
 
         $answer = array(
             "code" => 200,
-            "message" => "User registered successfully"
+            "message" => "User registered successfully",
+            "userId" => $_SESSION['userId']
         );
     }
 }
 
 echo json_encode($answer);
-
 ?>

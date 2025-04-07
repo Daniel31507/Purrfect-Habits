@@ -59,7 +59,7 @@ function start(id) {
                     <input type="password" id="pwd" placeholder="Passwort">
                 </div>
             
-            
+        
                 <div id="options">
                     <div id="opt1" onclick="register()">
                     <p>Registrieren</p>
@@ -95,6 +95,7 @@ function returnClicked() {
     document.getElementById('logregBox').style.height = '62.5vh';
     document.getElementById('logregBox').innerHTML = html;
 }
+
 function login() {
     let user = document.querySelector('#name').value;
     let pw = document.querySelector('#pwd').value;
@@ -116,8 +117,6 @@ function login() {
                 console.log(data);
 
                 if (data.code == 200) {
-                    // Speichern der Benutzer-ID im sessionStorage
-                    sessionStorage.setItem("userId", data.userId); // userId aus der API-Antwort
                     window.location.href = '../html/Auswahl.php';
                 } else {
                     alert("Falsche Anmeldedaten");
@@ -130,7 +129,6 @@ function login() {
         console.log('Fehler');
     }
 }
-
 
 function register() {
     let user = document.querySelector('#name').value;
@@ -153,8 +151,6 @@ function register() {
                 console.log(data);
 
                 if (data.code == 200) {
-                    // Speichern der Benutzer-ID im sessionStorage nach erfolgreicher Registrierung
-                    sessionStorage.setItem("userId", data.userId); // userId aus der API-Antwort
                     window.location.href = '../html/Auswahl.php';
                 } else {
                     alert("Benutzername bereits vergeben");

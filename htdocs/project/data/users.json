@@ -1,39 +1,15 @@
 {
     "users": [
         {
-            "id": "0",
-            "name": "admin",
-            "pwd": "admin",
-            "habits": []
-        },
-        {
-            "id": "1",
-            "name": "Rieser",
-            "pwd": "ayri",
+            "id": 1,
+            "name": "testuser",
+            "pwd": "testpassword",
             "habits": []
         },
         {
             "id": 2,
-            "name": "gallner",
-            "pwd": "siffir",
-            "habits": []
-        },
-        {
-            "id": 3,
-            "name": "test",
-            "pwd": "test",
-            "habits": []
-        },
-        {
-            "id": 4,
-            "name": "test1",
-            "pwd": "test1",
-            "habits": []
-        },
-        {
-            "id": 5,
-            "name": "admin2",
-            "pwd": "admin2",
+            "name": "admin",
+            "pwd": "admin",
             "habits": []
         }
     ]
