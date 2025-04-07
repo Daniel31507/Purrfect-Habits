@@ -17,6 +17,24 @@
             "name": "gallner",
             "pwd": "siffir",
             "habits": []
+        },
+        {
+            "id": 3,
+            "name": "test",
+            "pwd": "test",
+            "habits": []
+        },
+        {
+            "id": 4,
+            "name": "test1",
+            "pwd": "test1",
+            "habits": []
+        },
+        {
+            "id": 5,
+            "name": "admin2",
+            "pwd": "admin2",
+            "habits": []
         }
     ]
 }

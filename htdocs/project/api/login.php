@@ -1,4 +1,6 @@
 <?php
+session_start(); 
+
 
 $answer = array(
     "code" => 404,
@@ -18,6 +20,7 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
                 "code" => 200,
                 "message" => "Logged in successfully"
             );
+            $_SESSION['userId'] = $currentUser['id'];
             break;
         }
     }
