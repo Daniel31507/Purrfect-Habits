@@ -33,6 +33,14 @@ a{
 
 }
 
+#bottomLine{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #returnButton{
     background-color: #2e1601;
     color: white;
@@ -47,13 +55,31 @@ a{
 }
 
 #returnButton:hover{
-    background-color: #743a06;
+    background-color: #a04e06;
     color: #2e1601;
     border-color: #2e1601;
 }
 
 #returnLink{
     width: 15vw;
-    position: absolute;
-    margin-left: 42.7vw;
+}
+
+#btnAddNote{
+    background-color: #924400;
+    color: white;
+    border: 3px #2e1601 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    border-radius: 50%;
+    width: 4vw;
+    aspect-ratio: 1;
+    margin-left: 1vw;
+    transition: 0.3s ease-in-out;
+}
+
+#btnAddNote:hover{
+    background-color: rgb(231, 231, 231);
+    color: black;
 }

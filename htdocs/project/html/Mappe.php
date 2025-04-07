@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mappe | Purrfect Habits</title>
-    <link rel="stylesheet" href="../css/mappe.css">
+    <?php
+        echo '<link    href="../css/mappe.css'   . '?' . time() . '" rel="stylesheet">';
+        echo '<script  src="../js/mappe.js'    . '?' . time() . '" defer></script>';
+    ?>
 </head>
 
 <body>
@@ -19,11 +22,17 @@
         <img src="../img/Mappe.png" alt="Mappe" id="folderImg">
     </div>
     
-    <a href="./Hauptseite.php" id="returnLink">
+    <div id="bottomLine">
+            <a href="./Hauptseite.php" id="returnLink">
         <div id="returnButton">
             Zurück
         </div>
     </a>
+    <div id="btnAddNote" onclick="addNote()">
+        +
+    </div>
+    </div>
+
 
 </body>
 
