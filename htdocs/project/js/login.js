@@ -117,7 +117,11 @@ function login() {
                 console.log(data);
 
                 if (data.code == 200) {
-                    window.location.href = '../html/Auswahl.php';
+                    if(data.hasHabit == false) {
+                        window.location.href = '../html/Auswahl.php';
+                    } else {
+                        window.location.href = '../html/Hauptseite.php';
+                    }
                 } else {
                     alert("Falsche Anmeldedaten");
                 }
