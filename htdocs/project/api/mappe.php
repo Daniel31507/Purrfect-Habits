@@ -34,5 +34,23 @@ if (isset($_POST["note"])) {
     );
 }
 
+// else if ($_GET["notes"]) {
+else if ($_SERVER["REQUEST_METHOD"] === "GET") {
+
+    if (!file_exists($file_path)) {
+        echo json_encode(["notes" => []]);
+        exit;
+    }
+
+    $data = file_get_contents($file_path);
+    $notesData = json_decode($data, true);
+
+    if (!isset($notesData["notes"])) {
+        $notesData["notes"] = [];
+    }
+
+    echo json_encode($notesData);
+    exit;
+}
+
 echo json_encode($answer);
-?>

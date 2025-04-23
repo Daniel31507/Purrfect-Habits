@@ -1,3 +1,5 @@
+printAllNotes();
+
 function addNotePopUp() {
     document.getElementById("popUpBack").style.display = "flex";
 }
@@ -29,8 +31,8 @@ function addNote() {
                 console.log(data);
 
                 if (data.code == 200) {
-                    // printAllNotes();
                     console.log("Erfolgreich hinzugefügt")
+                    printAllNotes();
                 } else {
                     alert("Fehler beim hinzufügen der Notiz");
                 }
@@ -40,11 +42,32 @@ function addNote() {
             });
 
 
-        
+
     }
 }
 
 
 function printAllNotes() {
+    let leftPage = document.getElementById("leftPage");
+    leftPage.innerHTML = "<h1 class='pageHeadline'>Überschrift</h1>";
 
+    fetch("../api/mappe.php")
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            if (data.notes && Array.isArray(data.notes)) {
+                data.notes.forEach((note) => {
+                    let noteDiv = document.createElement("div");
+                    noteDiv.className = "noteBox";
+                    noteDiv.innerText = note;
+                    leftPage.appendChild(noteDiv);
+                });
+            } else {
+                leftPage.innerHTML = "<p>Keine Notizen gefunden.</p>";
+            }
+        })
+        .catch((error) => {
+            console.error("Fehler beim Laden der Notizen:", error);
+            leftPage.innerHTML = "<p>Fehler beim Laden der Notizen.</p>";
+        });
 }
