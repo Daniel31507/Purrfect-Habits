@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+
 $file_path = "../data/mappe.json";
 
 $answer = array(

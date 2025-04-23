@@ -4,7 +4,9 @@
             "id": 1,
             "name": "testuser",
             "pwd": "testpassword",
-            "habits": []
+            "habits": [
+                3
+            ]
         },
         {
             "id": 2,
