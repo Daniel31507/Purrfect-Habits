@@ -10,40 +10,31 @@ if (isset($_POST['userID']) && isset($_POST['habitID'])) {
     $userID = intval($_POST['userID']);
     $habitID = intval($_POST['habitID']);
 
-    // Datei einlesen
     $data = file_get_contents("../data/users.json");
     $decoded = json_decode($data);
 
-    // Fehler bei JSON prüfen
     if ($decoded === null || !isset($decoded->users)) {
         $answer["code"] = 500;
         $answer["message"] = "Invalid JSON structure";
     } else {
         $users = $decoded->users;
 
-        // Benutzer finden
         for ($i = 0; $i < count($users); $i++) {
             if ($users[$i]->id == $userID) {
 
-                // Stelle sicher, dass habits ein Array ist
-                if (!isset($users[$i]->habits) || !is_array($users[$i]->habits)) {
-                    $users[$i]->habits = [];
+                if (!empty($users[$i]->habits) && is_array($users[$i]->habits)) {
+                    $answer["code"] = 403;
+                    $answer["message"] = "User already has a habit";
+                    echo json_encode($answer);
+                    exit;
                 }
 
-                // Duplikate verhindern
-                if (!in_array($habitID, $users[$i]->habits)) {
-                    $users[$i]->habits[] = $habitID;
+                $users[$i]->habits = [$habitID];
+                $decoded->users = $users;
 
-                    // Änderungen zurückspeichern
-                    $decoded->users = $users;
-                    file_put_contents("../data/users.json", json_encode($decoded, JSON_PRETTY_PRINT));
-                    $answer["code"] = 200;
-                    $answer["message"] = "Saved";
-                } else {
-                    $answer["code"] = 202;
-                    $answer["message"] = "Already exists";
-                }
-
+                file_put_contents("../data/users.json", json_encode($decoded, JSON_PRETTY_PRINT));
+                $answer["code"] = 200;
+                $answer["message"] = "Saved";
                 break;
             }
         }

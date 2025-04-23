@@ -65,7 +65,6 @@ getUserId();
 
 
 function saveHabit() {
-    console.log(userID + " " + habitID);
     let userData = new FormData();
     userData.append('userID', userID);
     userData.append('habitID', habitID);
@@ -81,6 +80,10 @@ function saveHabit() {
         .then((data) => {
 
             console.log(data);
+
+            if(data.code == 200){
+                window.location.href = '../html/Hauptseite.php';
+            }
             
         })
         .catch((error) => {

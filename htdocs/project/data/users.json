@@ -11,6 +11,7 @@
             "name": "admin",
             "pwd": "admin",
             "habits": [
+                1
             ]
         }
     ]
