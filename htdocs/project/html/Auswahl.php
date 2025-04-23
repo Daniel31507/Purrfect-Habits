@@ -7,7 +7,6 @@
     <?php
         echo '<link    href="../css/auswahl.css'   . '?' . time() . '" rel="stylesheet">';
         echo '<script  src="../js/auswahl.js'    . '?' . time() . '" defer></script>';
-
     ?>
 </head>
 <body>
@@ -16,7 +15,7 @@
     <div id="boxes"></div>
     </div>
     <div id="iconBox"></div>
-    <div id="arrowButton" onclick="arrowButton()">&#8680</div>
+    <div id="arrowButton" onclick="saveHabit()">&#8680</div>
 
 </body>
 </html>

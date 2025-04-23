@@ -1,6 +1,7 @@
 {
     "habits": [
      {
+        "id": 1,
          "name": "Schlafmangel",
          "type": "gesundheit",
          "icon": "😴",
@@ -15,6 +16,7 @@
          ]
      },
      {
+        "id": 2,
          "name": "Bildschirmzeit",
          "type": "gesundheit",
          "icon": "📱",
@@ -29,6 +31,7 @@
          ]
      },
      {
+        "id": 3,
          "name": "Ernährung",
          "type": "gesundheit",
          "icon": "🥗",
@@ -43,6 +46,7 @@
          ]
      },
      {
+        "id": 4,
          "name": "Bewegungsmangel",
          "type": "gesundheit",
          "icon": "🚶",
@@ -57,6 +61,7 @@
          ]
      },
      {
+        "id": 5,
          "name": "Wasserzufuhr",
          "type": "gesundheit",
          "icon": "💧",
@@ -71,6 +76,7 @@
          ]
      },
      {
+        "id": 6,
          "name": "Stress",
          "type": "mental",
          "icon": "⚡",
@@ -85,6 +91,7 @@
          ]
      },
      {
+        "id": 7,
          "name": "Soziale Isolation",
          "type": "mental",
          "icon": "🏠",
@@ -100,6 +107,7 @@
      }
      ,
      {
+        "id": 8,
          "name": "Prokrastination",
          "type": "mental",
          "icon": "⏰",
