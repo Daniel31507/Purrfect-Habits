@@ -1,3 +1,6 @@
+let userID;
+let habitID;
+
 function getAllHabits() {
     fetch('../api/getHabits.php')
         .then((response) => response.json())
@@ -9,7 +12,7 @@ function getAllHabits() {
                     let habit = data.habits[i];
                     html += `
                     <div class="habitBox">
-                        <input type="radio" onclick="show(${i})" id="habit_${i}" name="habit_selection" value="${habit.name}">
+                        <input type="radio" onclick="show(${i + 1})" id="habit_${i}" name="habit_selection" value="${habit.name}">
                         <label for="habit_${i}">${habit.icon} ${habit.name}</label>
                     </div>`;
                 }
@@ -31,32 +34,59 @@ function show(habit) {
             let html = "";
             
             if (data.code == 200 && data.habits.length > 0) {
+
+                habitID = data.habits[0].id;
+                
                 html = `
                 <div class="icon">
-                    <img src="${data.habits[habit].mainIcon}"> <!-- Zugriff auf das erste Element -->
+                    <img src="${data.habits[0].mainIcon}">
                 </div>`;
-            }
+            }            
 
             document.getElementById("iconBox").innerHTML = html;
         })
         .catch((error) => {
             console.error("Fetch error:", error);
-            document.getElementById("iconBox").innerHTML = "<p>Fehler beim Laden.</p>";
         });
 }
 
+
 function getUserId(){
-    fetch(`../api/AuswhalApi.php`)
+    fetch(`../api/userInfo.php`)
         .then((response) => response.json())
         .then((data) => {
-
-            console.log(data);
-            
+                userID = data.userId;   
         })
         .catch((error) => {
             console.error("Fetch error:", error);
-            document.getElementById("iconBox").innerHTML = "<p>Fehler beim Laden.</p>";
         });
 }
 getUserId();
 
+
+function saveHabit() {
+    let userData = new FormData();
+    userData.append('userID', userID);
+    userData.append('habitID', habitID);
+
+    let fetch_URL = `../api/setHabit.php`;
+    let fetch_CONFIG = {
+        method: "POST",
+        body: userData
+    }
+
+    fetch(fetch_URL, fetch_CONFIG)
+        .then((response) => response.json())
+        .then((data) => {
+
+            console.log(data);
+
+            if(data.code == 200){
+                window.location.href = '../html/Hauptseite.php';
+            }
+            
+        })
+        .catch((error) => {
+            console.error("Fetch error:", error);
+        });
+}

@@ -1,6 +1,8 @@
 <?php
 session_start(); 
 
+
+
 $answer = array(
     "code" => 404,
     "message" => "Not logged in"

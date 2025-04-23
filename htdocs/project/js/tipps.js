@@ -35,7 +35,7 @@ function showTipp() {
     .then(response => response.json())
     .then(data => {
         const selectedHabit = "Schlafmangel";
-        const habit = data.habits.find(h => h.name === selectedHabit);
+        const habit = data.habits.find(h => h.name == selectedHabit);
         
         if (habit) {
             const randomTip = habit.tips[Math.floor(Math.random() * habit.tips.length)];
@@ -44,7 +44,7 @@ function showTipp() {
             document.getElementById("bubble").innerHTML = "Kein Tipp verfügbar.";
         }
     })
-    .catch(error => console.error("Fehler beim Laden der Tipps:", error));
+    .catch(error => console.error(error));
 }
 
 
