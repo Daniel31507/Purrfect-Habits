@@ -10,7 +10,8 @@
             "id": 2,
             "name": "admin",
             "pwd": "admin",
-            "habits": []
+            "habits": [
+            ]
         }
     ]
 }

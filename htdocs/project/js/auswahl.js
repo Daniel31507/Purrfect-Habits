@@ -12,7 +12,7 @@ function getAllHabits() {
                     let habit = data.habits[i];
                     html += `
                     <div class="habitBox">
-                        <input type="radio" onclick="show(${i})" id="habit_${i}" name="habit_selection" value="${habit.name}">
+                        <input type="radio" onclick="show(${i + 1})" id="habit_${i}" name="habit_selection" value="${habit.name}">
                         <label for="habit_${i}">${habit.icon} ${habit.name}</label>
                     </div>`;
                 }
@@ -51,8 +51,6 @@ function show(habit) {
 }
 
 
-
-
 function getUserId(){
     fetch(`../api/userInfo.php`)
         .then((response) => response.json())
@@ -67,12 +65,12 @@ getUserId();
 
 
 function saveHabit() {
-
+    console.log(userID + " " + habitID);
     let userData = new FormData();
     userData.append('userID', userID);
     userData.append('habitID', habitID);
 
-    let fetch_URL = `../api/setHabits.php`;
+    let fetch_URL = `../api/setHabit.php`;
     let fetch_CONFIG = {
         method: "POST",
         body: userData
