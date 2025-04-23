@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">x
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hauptseite | Purrfect Habits</title>
     <?php
@@ -16,10 +16,6 @@
 
     <div id="book" onclick="relocateToPage()">
         <img src="../img/buch.png">
-    </div>
-
-    <div id="status">
-        <img src="../img/icons/stress.png">
     </div>
 
     <div class="container">
