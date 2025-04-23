@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">x
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hauptseite | Purrfect Habits</title>
     <?php
@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+    <div id="catHead"><img src="../img/katzenStatusKöpfe/greenHead.png"></div>
 
 
     <div id="book" onclick="relocateToPage()">
@@ -46,6 +48,8 @@
     </div>
 
     <div id="arrowButton" onclick="arrowButton()">&#8680</div>
+
+    <div id="datum"></div>
 </body>
 
 </html>
