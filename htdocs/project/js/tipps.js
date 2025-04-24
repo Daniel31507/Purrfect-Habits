@@ -1,5 +1,5 @@
 let habitID;
-
+let habitName;
 function getUserHabitID() {
     fetch("../api/userInfo.php")
         .then((response) => response.json())
@@ -10,6 +10,8 @@ function getUserHabitID() {
 
                 // Jetzt kannst du basierend darauf z. B. Tipps laden:
                 loadTipsForHabit(habitID);
+                showTipp();
+
             }
         })
         .catch((error) => {
@@ -29,6 +31,8 @@ function loadTipsForHabit(habitId) {
             if (habit) {
                 console.log("Tipps für Habit:", habit.name);
                 console.log("Tipps:", habit.tips);
+                habitName = habit.name;
+
                 // Du kannst die Tipps hier z.B. dynamisch einfügen oder verwenden
             } else {
                 console.warn("Kein Habit mit dieser ID gefunden.");
@@ -68,13 +72,12 @@ function arrowButton() {
     window.location.href = "../html/Hauptseite.php";
 }
 
-showTipp();
 
 function showTipp() {
     fetch('../data/habits.json')
     .then(response => response.json())
     .then(data => {
-        const selectedHabit = "Schlafmangel";
+        const selectedHabit = habitName;
         const habit = data.habits.find(h => h.name == selectedHabit);
         
         if (habit) {
