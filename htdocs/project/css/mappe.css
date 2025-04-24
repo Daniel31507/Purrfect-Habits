@@ -96,6 +96,7 @@ a {
     background-color: #a04e06;
     color: #2e1601;
     border-color: #2e1601;
+    cursor: pointer;
 }
 
 #returnLink {
@@ -122,6 +123,7 @@ a {
 #btnAddNote:hover {
     background-color: rgb(231, 231, 231);
     color: black;
+    cursor: pointer;
 }
 
 #popUpBack{
@@ -164,6 +166,7 @@ a {
 #btnExitPopUp:hover {
     background-color: rgb(199, 199, 199);
     color: black;
+    cursor: pointer;
 }
 
 #addNotePopUp h2{
@@ -205,4 +208,5 @@ input:focus{
 #confirmNote:hover{
     background-color: #e16900;
     color: black;
+    cursor: pointer;
 }
