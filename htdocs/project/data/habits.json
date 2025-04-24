@@ -13,7 +13,8 @@
              "Nutze eine Abendroutine, um dich zu entspannen.",
              "Sorge für eine angenehme Schlafumgebung (dunkel, kühl, ruhig).",
              "Vermeide Koffein am späten Nachmittag und Abend."
-         ]
+         ],
+         "noteText": "Willkommen in der Mappe!nDein Ziel ist es jeden Tag einen Eintrag mit dem '+' Button zu machen um so die Katze bei Laune zu halten. Ein Eintrag soll folgendermaßen aussehen: Tag X: Schlafenszeit -> Zeit des Aufwachens (Schlafstunden). Versuche jeden Tag 30 min früher schlafen zu gehen, bis du eine Schlafzeit von 8h erreichst. Das ist eine gesunde und empfohlene Menge an Schlaf."
      },
      {
         "id": 2,
@@ -28,7 +29,8 @@
              "Reduziere Bildschirmzeit vor dem Schlafengehen.",
              "Plane bildschirmfreie Zeiten, z. B. beim Essen oder in sozialen Runden.",
              "Nutze alternative Aktivitäten wie Lesen oder Sport."
-         ]
+         ],
+         "noteText": "text für bildschirmzeit"
      },
      {
         "id": 3,
@@ -43,7 +45,8 @@
              "Trinke ausreichend Wasser über den Tag verteilt.",
              "Koche öfter selbst, um Kontrolle über Zutaten zu haben.",
              "Plane deine Mahlzeiten im Voraus, um ungesunde Snacks zu vermeiden."
-         ]
+         ],
+         "noteText": "text für ernährung"
      },
      {
         "id": 4,
@@ -58,7 +61,8 @@
              "Probiere verschiedene Sportarten, um eine passende zu finden.",
              "Nutze Stehpausen bei der Arbeit, um Bewegung zu fördern.",
              "Verknüpfe Bewegung mit Spaß, z. B. durch Musik oder Freunde."
-         ]
+         ],
+         "noteText": "text für bewegungsmangel"
      },
      {
         "id": 5,
@@ -73,7 +77,8 @@
              "Setze dir Erinnerungen, um regelmäßig Wasser zu trinken.",
              "Geschmacksvarianten wie Zitronenwasser können helfen.",
              "Ersetze Softdrinks und Kaffee öfter durch Wasser."
-         ]
+         ],
+         "noteText": "text für wasserzufuhr"
      },
      {
         "id": 6,
@@ -88,7 +93,8 @@
              "Reduziere Stressfaktoren durch besseres Zeitmanagement.",
              "Bewege dich regelmäßig, um Stress abzubauen.",
              "Sprich mit Freunden oder Familie über deine Belastungen."
-         ]
+         ],
+         "noteText": "text für stress"
      },
      {
         "id": 7,
@@ -103,7 +109,8 @@
              "Nutze Videoanrufe, wenn persönliche Treffen nicht möglich sind.",
              "Baue kleine soziale Interaktionen in deinen Alltag ein.",
              "Sei offen für neue Kontakte und Gelegenheiten zum Austausch."
-         ]
+         ],
+         "noteText": "text für soziale Isolation"
      }
      ,
      {
@@ -119,7 +126,8 @@
             "Führe eine To-Do-Liste: Halte deine Aufgaben schriftlich fest und arbeite sie systematisch ab. Das Abhaken erledigter Aufgaben gibt dir ein Erfolgserlebnis.",
             "Arbeite mit Zeitblöcken: Teile deine Arbeit in feste Zeiträume (z. B. Pomodoro-Technik) ein, um dich besser zu fokussieren und die Prokrastination zu überwinden.",
             "Vermeide Ablenkungen: Schalte Benachrichtigungen aus und schaffe dir eine ruhige Arbeitsumgebung, um konzentriert und effektiv zu bleiben."
-          ]
+          ],
+         "noteText": "text für prokrastination"
      }
     ]
  }

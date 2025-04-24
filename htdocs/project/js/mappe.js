@@ -26,7 +26,7 @@ function loadTipsForHabit(habitId) {
                 console.log("Tipps für Habit:", habit.name);
                 console.log("Tipps:", habit.tips);
                 document.getElementById('h1H').innerHTML = `${habit.name}`
-                document.getElementById('rightPage').innerHTML = `<p id='habitDescription'>${habit.description}</p>`
+                document.getElementById('rightPage').innerHTML = `<p id='habitDescription'>${habit.noteTexts}</p>`
                 // Du kannst die Tipps hier z.B. dynamisch einfügen oder verwenden
             } else {
                 console.warn("Kein Habit mit dieser ID gefunden.");
