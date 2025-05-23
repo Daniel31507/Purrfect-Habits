@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 $file_path = "../data/mappe.json";
 
 $answer = array(
@@ -9,47 +8,72 @@ $answer = array(
     "message" => "No note provided"
 );
 
-if (isset($_POST["note"])) {
-    $note = $_POST["note"];
-
-    // Falls Datei nicht existiert, leeres Array erstellen
-    if (!file_exists($file_path)) {
-        file_put_contents($file_path, json_encode(["notes" => []]));
-    }
-
-    // Vorhandene Notizen laden
-    $data = file_get_contents($file_path);
-    $notesData = json_decode($data, true);
-
-    if (!isset($notesData["notes"])) {
-        $notesData["notes"] = [];
-    }
-
-    // Neue Notiz hinzufügen
-    $notesData["notes"][] = $note;
-
-    // Zurückschreiben
-    file_put_contents($file_path, json_encode($notesData, JSON_PRETTY_PRINT));
-
-    $answer = array(
-        "code" => 200,
-        "message" => "Note saved successfully"
-    );
+// Dummy user id, falls noch keine Session-Userid gesetzt ist (zum Testen)
+if (!isset($_SESSION["userid"])) {
+    $_SESSION["userid"] = 1;
 }
 
-// else if ($_GET["notes"]) {
-else if ($_SERVER["REQUEST_METHOD"] === "GET") {
+$userid = $_SESSION["userid"];
 
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST["note"])) {
+        $note = trim($_POST["note"]);
+
+        // Falls Datei nicht existiert, mit Grundstruktur anlegen
+        if (!file_exists($file_path)) {
+            file_put_contents($file_path, json_encode(["usernotes" => []], JSON_PRETTY_PRINT));
+        }
+
+        // Daten laden
+        $data = file_get_contents($file_path);
+        $notesData = json_decode($data, true);
+
+        if (!isset($notesData["usernotes"])) {
+            $notesData["usernotes"] = [];
+        }
+
+        // Suchen, ob der User schon vorhanden ist
+        $userIndex = null;
+        foreach ($notesData["usernotes"] as $index => $usernotes) {
+            if (isset($usernotes["userid"]) && $usernotes["userid"] == $userid) {
+                $userIndex = $index;
+                break;
+            }
+        }
+
+        if ($userIndex === null) {
+            // User noch nicht vorhanden, neu anlegen
+            $notesData["usernotes"][] = [
+                "userid" => $userid,
+                "notes" => [$note]
+            ];
+        } else {
+            // User gefunden, Note hinzufügen
+            if (!isset($notesData["usernotes"][$userIndex]["notes"])) {
+                $notesData["usernotes"][$userIndex]["notes"] = [];
+            }
+            $notesData["usernotes"][$userIndex]["notes"][] = $note;
+        }
+
+        // Datei speichern
+        file_put_contents($file_path, json_encode($notesData, JSON_PRETTY_PRINT));
+
+        $answer = array(
+            "code" => 200,
+            "message" => "Note saved successfully"
+        );
+    }
+} else if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (!file_exists($file_path)) {
-        echo json_encode(["notes" => []]);
+        echo json_encode(["usernotes" => []]);
         exit;
     }
 
     $data = file_get_contents($file_path);
     $notesData = json_decode($data, true);
 
-    if (!isset($notesData["notes"])) {
-        $notesData["notes"] = [];
+    if (!isset($notesData["usernotes"])) {
+        $notesData["usernotes"] = [];
     }
 
     echo json_encode($notesData);

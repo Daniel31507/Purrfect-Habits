@@ -2,24 +2,8 @@
     "users": [
         {
             "id": 1,
-            "name": "testuser",
-            "pwd": "testpassword",
-            "habits": [
-                3
-            ]
-        },
-        {
-            "id": 2,
             "name": "admin",
             "pwd": "admin",
-            "habits": [
-                8
-            ]
-        },
-        {
-            "id": 3,
-            "name": "test43",
-            "pwd": "43",
             "habits": [
                 1
             ]
