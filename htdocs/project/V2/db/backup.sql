@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql-db
--- Erstellungszeit: 23. Mai 2025 um 16:29
+-- Erstellungszeit: 23. Mai 2025 um 16:54
 -- Server-Version: 9.2.0
 -- PHP-Version: 8.2.27
 
@@ -157,7 +157,7 @@ ALTER TABLE `habits`
 -- AUTO_INCREMENT für Tabelle `habits_tips`
 --
 ALTER TABLE `habits_tips`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT für Tabelle `users`

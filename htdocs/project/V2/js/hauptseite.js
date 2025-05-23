@@ -4,7 +4,6 @@ function arrowButton() {
     window.location.href = "../php/Tipps&Tricks.php";
 }
 
-
 function relocateToPage() {
     window.location.href = "../php/Mappe.php";
 }
@@ -29,7 +28,6 @@ function displayTime() {
     sec.style.transform = `rotate(${sRotation}deg)`;
 
 }
-
 setInterval(displayTime, 1000);
 
 // statusHead();

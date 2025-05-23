@@ -17,6 +17,5 @@
 
 <div id="arrowButton" onclick="arrowButton()">&#8678</div>
 
-<!-- pfeil nach rechts: &#8680 -->
 </body>
 </html>
