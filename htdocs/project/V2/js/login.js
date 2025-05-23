@@ -154,11 +154,11 @@ function register() {
             .then((data) => {
                 console.log(data);
 
-                // if (data.code == 200) {
-                //     window.location.href = '../html/Auswahl.php';
-                // } else {
-                //     alert("Benutzername bereits vergeben");
-                // }
+                if (data.code == 200) {
+                    window.location.href = '../php/Auswahl.php';
+                } else {
+                    alert("Benutzername bereits vergeben");
+                }
             })
             .catch((error) => {
                 console.error('Fetch error:', error);
