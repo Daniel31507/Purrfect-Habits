@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql-db
--- Erstellungszeit: 23. Mai 2025 um 13:51
+-- Erstellungszeit: 23. Mai 2025 um 16:29
 -- Server-Version: 9.2.0
 -- PHP-Version: 8.2.27
 
@@ -76,7 +76,37 @@ INSERT INTO `habits_tips` (`ID`, `habitID`, `note`) VALUES
 (7, 2, 'Nutze Blaulichtfilter oder Nachtmodus am Abend.'),
 (8, 2, 'Reduziere Bildschirmzeit vor dem Schlafengehen.'),
 (9, 2, 'Plane bildschirmfreie Zeiten, z. B. beim Essen oder in sozialen Runden.'),
-(10, 2, 'Nutze alternative Aktivitäten wie Lesen oder Sport.');
+(10, 2, 'Nutze alternative Aktivitäten wie Lesen oder Sport.'),
+(11, 3, 'Achte auf eine ausgewogene Ernährung mit viel Gemüse und Proteinen.'),
+(12, 3, 'Reduziere Zucker und verarbeitete Lebensmittel.'),
+(13, 3, 'Trinke ausreichend Wasser über den Tag verteilt.'),
+(14, 3, 'Koche öfter selbst, um Kontrolle über Zutaten zu haben.'),
+(15, 3, 'Plane deine Mahlzeiten im Voraus, um ungesunde Snacks zu vermeiden.'),
+(16, 4, 'Baue Bewegung in deinen Alltag ein (z. B. Treppen statt Aufzug).'),
+(17, 4, 'Setze dir feste Zeiten für Sport oder Spaziergänge.'),
+(18, 4, 'Probiere verschiedene Sportarten, um eine passende zu finden.'),
+(19, 4, 'Nutze Stehpausen bei der Arbeit, um Bewegung zu fördern.'),
+(20, 4, 'Verknüpfe Bewegung mit Spaß, z. B. durch Musik oder Freunde.'),
+(21, 5, 'Trinke ein Glas Wasser direkt nach dem Aufstehen.'),
+(22, 5, 'Nutze eine Trinkflasche, um deinen Wasserkonsum im Blick zu behalten.'),
+(23, 5, 'Setze dir Erinnerungen, um regelmäßig Wasser zu trinken.'),
+(24, 5, 'Geschmacksvarianten wie Zitronenwasser können helfen.'),
+(25, 5, 'Ersetze Softdrinks und Kaffee öfter durch Wasser.'),
+(26, 6, 'Nutze Atemtechniken zur schnellen Entspannung.'),
+(27, 6, 'Plane bewusste Entspannungszeiten ein (z. B. Meditation).'),
+(28, 6, 'Reduziere Stressfaktoren durch besseres Zeitmanagement.'),
+(29, 6, 'Bewege dich regelmäßig, um Stress abzubauen.'),
+(30, 6, 'Sprich mit Freunden oder Familie über deine Belastungen.'),
+(31, 7, 'Plane regelmäßige Treffen mit Freunden oder Familie.'),
+(32, 7, 'Nimm an Gruppenaktivitäten oder Vereinen teil.'),
+(33, 7, 'Nutze Videoanrufe, wenn persönliche Treffen nicht möglich sind.'),
+(34, 7, 'Baue kleine soziale Interaktionen in deinen Alltag ein.'),
+(35, 7, 'Sei offen für neue Kontakte und Gelegenheiten zum Austausch.'),
+(36, 8, 'Setze dir konkrete Ziele: Formuliere klare und erreichbare Ziele, um die Aufgabe überschaubar zu machen und die Prokrastination zu vermeiden.'),
+(37, 8, 'Nutze die 5-Minuten-Regel: Starte eine Aufgabe, indem du dich verpflichtest, nur 5 Minuten daran zu arbeiten. Oft wirst du länger bleiben, wenn du erst einmal angefangen hast.\r\n'),
+(38, 8, 'Führe eine To-Do-Liste: Halte deine Aufgaben schriftlich fest und arbeite sie systematisch ab. Das Abhaken erledigter Aufgaben gibt dir ein Erfolgserlebnis\r\n'),
+(39, 8, 'Arbeite mit Zeitblöcken: Teile deine Arbeit in feste Zeiträume (z. B. Pomodoro-Technik) ein, um dich besser zu fokussieren und die Prokrastination zu überwinden.\r\n'),
+(40, 8, 'Vermeide Ablenkungen: Schalte Benachrichtigungen aus und schaffe dir eine ruhige Arbeitsumgebung, um konzentriert und effektiv zu bleiben.\r\n');
 
 -- --------------------------------------------------------
 
@@ -127,7 +157,7 @@ ALTER TABLE `habits`
 -- AUTO_INCREMENT für Tabelle `habits_tips`
 --
 ALTER TABLE `habits_tips`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT für Tabelle `users`
