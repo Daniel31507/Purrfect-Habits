@@ -39,7 +39,6 @@ function loadTipsForHabit(habitId) {
 getUserHabitID();
 
 
-printAllNotes();
 
 function addNotePopUp() {
     document.getElementById("popUpBack").style.display = "flex";
@@ -87,7 +86,7 @@ function addNote() {
     }
 }
 
-
+printAllNotes();
 function printAllNotes() {
     let leftPage = document.getElementById("leftPage");
     leftPage.innerHTML = "<h1 id='h1H' class='pageHeadline'></h1>";
