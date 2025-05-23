@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body{
+    background-color: #532904;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* FOLDER */
+#folder {
+    height: 90vh;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#folderImg {
+    height: 100%;
+}
+
+#pages {
+    /* background-color: lime; */
+    width: 115vh;
+    height: 73vh;
+    position: absolute;
+    top: 8vh;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#leftPage {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#rightPage {
+    /* background-color: blue; */
+    width: 100%;
+    height: 100%;
+}
+
+.pageHeadline{
+    color: #62604f;
+    text-align: center;
+    margin: 3%;
+}
+
+#bottomLine {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noteBox{
+    background-color: #BAB382;
+    border-radius: 10px;
+    color: #62604f;
+    padding: 3%;
+    margin: 6%;
+}
+
+
+/* RETURN-BTN */
+#returnButton {
+    background-color: #2e1601;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 800;
+    text-align: center;
+    padding: 0.3vw;
+    border: 3px #2e1601 solid;
+    border-radius: 1vw;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#returnButton:hover {
+    background-color: #a04e06;
+    color: #2e1601;
+    border-color: #2e1601;
+    cursor: pointer;
+}
+
+#returnLink {
+    width: 15vw;
+}
+
+
+/* ADD NOTE */
+#btnAddNote {
+    background-color: #924400;
+    color: white;
+    border: 3px #2e1601 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    border-radius: 50%;
+    width: 4vw;
+    aspect-ratio: 1;
+    margin-left: 1vw;
+    transition: 0.3s ease-in-out;
+}
+
+#btnAddNote:hover {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    cursor: pointer;
+}
+
+#popUpBack{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.49);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#addNotePopUp{
+    width: 50%;
+    height: 40%;
+    background-color: #bd5800f7;
+    border-radius: 3vh;
+    text-align: center;
+}
+
+#btnExitPopUp {
+    background-color: #552800;
+    color: white;
+    border: 3px #2e1601 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    border-radius: 50%;
+    width: 4vw;
+    aspect-ratio: 1;
+    margin-left: 1vw;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    top: 2vh;
+}
+
+#btnExitPopUp:hover {
+    background-color: rgb(199, 199, 199);
+    color: black;
+    cursor: pointer;
+}
+
+#addNotePopUp h2{
+    color: white;
+    background-color: unset;
+    font-size: 5vh;
+}
+
+input{
+    width: 60%;
+    color: white;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+    background-color: #532904;
+}
+
+input:focus{
+    border-color: #552800;
+    box-shadow: 0 0 0 3px #c88348;
+}
+
+#confirmNote{
+    width: 20%;
+    margin: 3%;
+    margin-left: 40%;
+    color: white;
+    background-color: #773800;
+    cursor: pointer;
+    border: black 3px solid;
+    border-radius: 5px;
+    transition: ease-in-out 0.3s;
+}
+
+#confirmNote:hover{
+    background-color: #e16900;
+    color: black;
+    cursor: pointer;
+}

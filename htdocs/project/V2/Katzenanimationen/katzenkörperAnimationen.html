@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katzenanimation Prototyp</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(60, 141, 234);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
+        /* Katzenkörper */
+
+        #catBody{
+            max-width: 15vw;
+            max-height: auto;
+        }
+
+        #catBodyWithArm{
+            max-width: 15vw;
+            max-height: auto;
+            position: absolute;
+            left: 30vw;
+        }
+
+        /* Stillstanding Animation */
+
+        #stillStanding1{
+            position: absolute;
+            left: 	2.3vw;
+            top: 11vw;
+            max-width: 5vw;
+            transform: rotate(-140deg);
+            max-height: auto;
+            animation: stillStanding 3s linear infinite;
+        }
+
+        @keyframes stillStanding {
+            0%{transform: rotate(-140deg)}
+            10%{transform: rotate(-145deg)}
+            20%{transform: rotate(-150deg)}
+            30%{transform: rotate(-155deg)}
+            40%{transform: rotate(-160deg)}
+            50%{transform: rotate(-165deg)}
+            60%{transform: rotate(-160deg)}
+            70%{transform: rotate(-155deg)}
+            80%{transform: rotate(-150deg)}
+            90%{transform: rotate(-145deg)}
+            100%{transform: rotate(-140deg)}
+        }
+
+        /* Waving Animation */
+
+        #wavingArm{
+            position: absolute;
+            left: 	32vw;
+            top: 10vw;
+            max-width: 5vw;
+            transform: rotate(-140deg);
+            max-height: auto;
+            animation: waving 3s linear infinite;
+        }
+
+        @keyframes waving {
+            0%{transform: rotate(-140deg)}
+            10%{transform: rotate(-135deg)}
+            20%{transform: rotate(-130deg)}
+            30%{transform: rotate(-125deg)}
+            40%{transform: rotate(-120deg)}
+            50%{transform: rotate(-115deg)}
+            60%{transform: rotate(-120deg)}
+            70%{transform: rotate(-125deg)}
+            80%{transform: rotate(-130deg)}
+            90%{transform: rotate(-135deg)}
+            100%{transform: rotate(-140deg)}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Katzenanimation</h1>
+
+    <img id="catBody" src="./katzenKörper/körper.png" alt="">
+
+    <img id="stillStanding1" src="./katzenKörper/katzenArm.png" alt="">
+
+
+    <img id="catBodyWithArm" src="./katzenKörper/körperMitArm.png" alt="">
+
+    <img id="wavingArm" src="./katzenKörper/katzenArm.png" alt="">
+</body>
+</html>

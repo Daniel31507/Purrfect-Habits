@@ -38,12 +38,12 @@ function loadTipsForHabit(habitId) {
 getUserHabitID();
 
 function arrowButton() {
-    window.location.href = "../html/Tipps&Tricks.php";
+    window.location.href = "../php/Tipps&Tricks.php";
 }
 
 
 function relocateToPage() {
-    window.location.href = "../html/Mappe.php";
+    window.location.href = "../php/Mappe.php";
 }
 
 let hr = document.getElementById('hour');
