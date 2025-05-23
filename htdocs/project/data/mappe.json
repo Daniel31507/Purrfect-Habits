@@ -1,8 +1,12 @@
 {
-    "notes": [
-        "Tag 1",
-        "Tag 2",
-        "Tag 3: Fabian",
-        "Tag 4"
+    "usernotes": [
+        {
+            "userid": 1,
+            "notes": [
+                "Tag 1",
+                "Tag 2",
+                "test123"
+            ]
+        }
     ]
 }

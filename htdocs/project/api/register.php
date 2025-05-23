@@ -2,6 +2,7 @@
 session_start();
 
 $file_path = "../data/users.json";
+$file_path2 = "../data/mappe.json";
 
 $answer = array(
     "code" => 404,
@@ -18,6 +19,9 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
 
     $data = file_get_contents($file_path);
     $users = json_decode($data, true);
+
+    $data2 = file_get_contents($file_path2);
+    $mappe = json_decode($data2, true);
 
     if (!isset($users['users'])) {
         $users['users'] = [];
@@ -50,7 +54,13 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
             "habits" => []
         );
 
+        $mappe['usernotes'][] = array(
+            "userid" => $newUserId,
+            "notes" => []
+        );
+
         file_put_contents($file_path, json_encode($users, JSON_PRETTY_PRINT));
+        file_put_contents($file_path2, json_encode($mappe, JSON_PRETTY_PRINT));
 
         $answer = array(
             "code" => 200,

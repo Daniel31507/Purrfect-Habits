@@ -50,6 +50,11 @@
         </div>
     </div>
 
+    <script>
+    const currentUserId = <?php echo json_encode($_SESSION["userid"] ?? 1); ?>;
+    </script>
+
+
 </body>
 
 </html>

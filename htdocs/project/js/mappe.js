@@ -96,13 +96,21 @@ function printAllNotes() {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            if (data.notes && Array.isArray(data.notes)) {
-                data.notes.forEach((note) => {
-                    let noteDiv = document.createElement("div");
-                    noteDiv.className = "noteBox";
-                    noteDiv.innerText = note;
-                    leftPage.appendChild(noteDiv);
-                });
+            if (data.usernotes && Array.isArray(data.usernotes)) {
+                let currentUserId = 1;
+
+                let userEntry = data.usernotes.find(u => u.userid === currentUserId);
+
+                if (userEntry && Array.isArray(userEntry.notes) && userEntry.notes.length > 0) {
+                    userEntry.notes.forEach((note) => {
+                        let noteDiv = document.createElement("div");
+                        noteDiv.className = "noteBox";
+                        noteDiv.innerText = note;
+                        leftPage.appendChild(noteDiv);
+                    });
+                } else {
+                    leftPage.innerHTML = "<p>Keine Notizen gefunden.</p>";
+                }
             } else {
                 leftPage.innerHTML = "<p>Keine Notizen gefunden.</p>";
             }
