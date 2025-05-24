@@ -31,7 +31,7 @@
                 Zurück
             </div>
         </a>
-        <div id="btnAddNote" onclick="addNotePopUp()">
+        <div id="btnAddNote" onclick="openPopUp()">
             +
         </div>
     </div>

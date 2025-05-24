@@ -1,114 +1,145 @@
-// let habitID;
 
-// function getUserHabitID() {
-//     fetch("../api/userInfo.php")
-//         .then((response) => response.json())
-//         .then((data) => {
-//             if (data.loggedIn && data.habitIds.length > 0) {
-//                 habitID = data.habitIds[0];
-//                 console.log("Aktuelle Habit-ID:", habitID);
+let userID;
+let habitID;
+let habitName;
 
-//                 // Jetzt kannst du basierend darauf z. B. Tipps laden:
-//                 loadTipsForHabit(habitID);
-//             }
-//         })
-//         .catch((error) => {
-//             console.error("Fehler beim Abrufen der Habit-ID:", error);
-//         });
-// }
-
-// function loadTipsForHabit(habitId) {
-//     fetch("../data/habits.json")
-//         .then((response) => response.json())
-//         .then((data) => {
-//             const habit = data.habits.find(h => h.id === habitId);
-//             if (habit) {
-//                 console.log("Tipps für Habit:", habit.name);
-//                 console.log("Tipps:", habit.tips);
-//                 document.getElementById('h1H').innerHTML = `${habit.name}`
-//                 document.getElementById('rightPage').innerHTML = `<p id='habitDescription'>${habit.noteTexts}</p>`
-//                 // Du kannst die Tipps hier z.B. dynamisch einfügen oder verwenden
-//             } else {
-//                 console.warn("Kein Habit mit dieser ID gefunden.");
-//             }
-//         })
-//         .catch((err) => console.error("Fehler beim Laden der habits.json:", err));
-// }
+function getUserID() {
+    fetch("../api/getUserID.php")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            if (data.userID !== 0) {
+                userID = data.userID;
+                getHabitName(userID);
+                getUserHabitID(userID);
+            }
+        })
+        .catch(error => {
+            console.error("Fehler beim Abrufen der User-ID:", error);
+        });
+}
+getUserID();
 
 
-// getUserHabitID();
+function getHabitName(userID) {
+    fetch(`../api/getHabitTitle.php?userID=${userID}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.code === 200) {
+                console.log("Habit-Name:", data.habitName);
+                habitName = data.habitName;
+            }
+        })
+        .catch(error => {
+            console.error("Fehler beim Abrufen des Habits:", error);
+        });
+}
 
 
-// printAllNotes();
+function getUserHabitID(userID) {
+    fetch(`../api/getUserData.php?uid=${userID}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            if (data.code === 200) {
+                habitID = data.habitID[0].habitID;
+                printAllNotes();
+                loadTipsForHabit(habitID);
+            }
+        })
+        .catch(error => {
+            console.error("Fehler beim Abrufen der Habit-ID:", error);
+        });
+}
 
-// function addNotePopUp() {
-//     document.getElementById("popUpBack").style.display = "flex";
-// }
+function openPopUp() {
+    document.getElementById("popUpBack").style.display = "flex";
+}
 
-// function closePopUp() {
-//     document.getElementById("popUpBack").style.display = "none";
+function closePopUp() {
+    document.getElementById("popUpBack").style.display = "none";
+}
 
-// }
+function addNote() {
+    if (userID !== 0) {
+        let note = document.getElementById("noteInput").value;
 
-// function addNote() {
-//     let note = document.getElementById("noteInput").value;
+        if (note !== "") {
+            let formData = new FormData();
+            formData.append('entry', note);
+            formData.append('userID', userID);
 
-//     if (note == "") {
-//         alert("Falscher Input")
-//     } else {
+            fetch('../api/setEntry.php', {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.code === 200) {
+                        document.getElementById("popUpBack").style.display = "none";
+                        console.log("Erfolgreich hinzugefügt");
+                        printAllNotes();
+                    } else {
+                        alert("Fehler beim Hinzufügen der Notiz");
+                    }
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                });
+        } else {
+            alert("Notizfeld ist leer.");
+        }
+    } else {
+        console.log("Nicht angemeldet");
+    }
+}
 
-//         let formData = new FormData();
-//         formData.append('note', note);
+function printAllNotes() {
+    let formData = new FormData();
+    formData.append('userID', userID);
+    let leftPage = document.getElementById("leftPage");
 
-//         let fetch_URL = '../api/mappe.php';
-//         let fetch_CONFIG = {
-//             method: "POST",
-//             body: formData
-//         }
-
-//         fetch(fetch_URL, fetch_CONFIG)
-//             .then((response) => { return response.json(); })
-//             .then((data) => {
-//                 console.log(data);
-
-//                 if (data.code == 200) {
-//                     console.log("Erfolgreich hinzugefügt")
-//                     printAllNotes();
-//                 } else {
-//                     alert("Fehler beim hinzufügen der Notiz");
-//                 }
-//             })
-//             .catch((error) => {
-//                 console.error('Fetch error:', error);
-//             });
+    fetch('../api/getEntries.php', {
+        method: "POST",
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
 
 
+            let html = `<h1 id='h1H' class='pageHeadline'>${habitName}</h1>`;
 
-//     }
-// }
+            if (data.code == 200) {
+                for (let i = 0; i < data.entry.length; i++) {
+                    html += `
+                    <div class="noteBox">
+                        ${data.entry[i]}
+                    </div>`;
+                }
 
 
-// function printAllNotes() {
-//     let leftPage = document.getElementById("leftPage");
-//     leftPage.innerHTML = "<h1 id='h1H' class='pageHeadline'></h1>";
+            }
+            leftPage.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+        });
+}
 
-//     fetch("../api/mappe.php")
-//         .then((response) => response.json())
-//         .then((data) => {
-//             console.log(data);
-//             if (data.notes && Array.isArray(data.notes)) {
-//                 data.notes.forEach((note) => {
-//                     let noteDiv = document.createElement("div");
-//                     noteDiv.className = "noteBox";
-//                     noteDiv.innerText = note;
-//                     leftPage.appendChild(noteDiv);
-//                 });
-//             } else {
-//                 leftPage.innerHTML = "<p>Keine Notizen gefunden.</p>";
-//             }
-//         })
-//         .catch((error) => {
-//             console.error("Fehler beim Laden der Notizen:", error);
-//             leftPage.innerHTML = "<p>Fehler beim Laden der Notizen.</p>";
-//         });
-// }
+function loadTipsForHabit(habitId) {
+    fetch(`../api/getHabitTips.php?habitID=${habitId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            tips = data.tips;
+            showTipp();
+        })
+        .catch((err) => console.error("Fehler beim Laden der habits", err));
+}
+
+function showTipp() {
+    const randomTip = tips[Math.floor(Math.random() * tips.length)];
+    document.getElementById("rightPage").innerHTML = `<h1> ${randomTip} </h1>`;
+}

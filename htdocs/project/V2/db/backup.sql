@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql-db
--- Erstellungszeit: 23. Mai 2025 um 16:54
+-- Erstellungszeit: 24. Mai 2025 um 10:51
 -- Server-Version: 9.2.0
 -- PHP-Version: 8.2.27
 
@@ -122,6 +122,32 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Daten für Tabelle `users`
+--
+
+INSERT INTO `users` (`ID`, `username`, `password`, `habitID`) VALUES
+(1, 'test', '$2y$10$LtJQ1n5Kjb9YO1E1YprEm.hdtEn7DYs0qlnrIkSPQEux2.llnK29S', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `users_notes`
+--
+
+CREATE TABLE `users_notes` (
+  `ID` int NOT NULL,
+  `userID` int NOT NULL,
+  `entry` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Daten für Tabelle `users_notes`
+--
+
+INSERT INTO `users_notes` (`ID`, `userID`, `entry`) VALUES
+(1, 1, 'Tag 1:  5h Schlaf');
+
+--
 -- Indizes der exportierten Tabellen
 --
 
@@ -144,6 +170,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indizes für die Tabelle `users_notes`
+--
+ALTER TABLE `users_notes`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- AUTO_INCREMENT für exportierte Tabellen
 --
 
@@ -163,7 +195,13 @@ ALTER TABLE `habits_tips`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT für Tabelle `users_notes`
+--
+ALTER TABLE `users_notes`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
