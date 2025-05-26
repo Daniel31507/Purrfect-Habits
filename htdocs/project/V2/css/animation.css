@@ -1,27 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katzenanimation Prototyp</title>
-    <style>
-        body {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: rgb(60, 141, 234);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-
+#catHead {
+    background-color: #303030;
+    border-radius: 100%;
+    position: absolute;
+    left: 84.5vw;
+    top: 6vh;
+    border-width: 0.2vw;
+    border-color: #000000;
+    border-style: solid;
+    width: 12vw;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
         /* Statusköpfe */
 
         /* Green Status Head */
-        #greenAnim{
+        #greenAnim {
             position: absolute;
-            left: 10vw;
+            /* left: 10vw; */
             font-size: 100%;
         }
 
@@ -30,10 +27,10 @@
             max-height: 20vh;
         }
 
-        #wholeGreenMouth{
+        #wholeGreenMouth {
             position: relative;
             bottom: 7vh;
-            
+
         }
 
         #greenMouth {
@@ -57,7 +54,7 @@
             left: 9.8vh;
             bottom: 2.2vh;
             width: 1em;
-            
+
         }
 
         @keyframes greenStatus {
@@ -76,9 +73,9 @@
 
 
         /* Yellow Status Head */
-        #yellowAnim{
+        #yellowAnim {
             position: absolute;
-            left: 0vw;
+            /* left: 0vw; */
         }
 
         #yellowHead {
@@ -104,21 +101,23 @@
             0% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(50%);
             }
+
             100% {
                 transform: translateY(0);
 
             }
         }
-        
+
 
 
         /* Red Status Head */
-        #redAnim{
+        #redAnim {
             position: absolute;
-            left: 20vw;
+            /* left: 20vw; */
         }
 
         #redHead {
@@ -134,7 +133,7 @@
             left: 47%;
             width: 18%;
             height: 7%;
-            animation: redStatusRight 2.5s ease-in-out infinite; 
+            animation: redStatusRight 2.5s ease-in-out infinite;
             /* border: white 1px solid; */
         }
 
@@ -200,34 +199,3 @@
                 left: 3.5vw;
            }
         } */
-    </style>
-</head>
-
-<body>
-    <h1>Katzenanimation</h1>
-
-    <div id="yellowAnim">
-        <img id="yellowHead" src="../img/katzenStatusKöpfe/yellowHead.png" alt="">
-
-        <div id="yellowStatusBar">placeHolder</div>
-    </div>
-
-    <div id="greenAnim">
-        <img id="greenHead" src="../img/katzenStatusKöpfe/greenHead.png" alt="">
-
-        <div id="wholeGreenMouth">
-            <div id="greenMouth">....</div>
-    
-            <div id="toungePiece">....</div>
-        </div>
-
-    </div>
-    
-    <div id="redAnim">
-        <img id="redHead" src="../img/katzenStatusKöpfe/redHead.png" alt="">
-        <div id="redStatusBarRight">brows</div>
-        <div id="redStatusBarLeft">brows</div>
-    </div>
-</body>
-
-</html>
