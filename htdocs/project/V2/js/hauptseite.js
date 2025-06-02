@@ -1,3 +1,42 @@
+let statusContent_green = `  
+      <div id="greenAnim">
+    <img id="greenHead" src="../img/katzenStatusKöpfe/greenHead.png" alt="">
+
+    <div id="wholeGreenMouth">
+      <div id="greenMouth">....</div>
+
+      <div id="toungePiece">....</div>
+    </div>
+
+  </div>`;
+let statusContent_yellow = `
+  <div id="yellowAnim">
+    <img id="yellowHead" src="../img/katzenStatusKöpfe/yellowHead.png" alt="">
+
+    <div id="yellowStatusBar">placeHolder</div>
+  </div>
+`;
+let statusContent_red = `
+    <div id="redAnim">
+    <img id="redHead" src="../img/katzenStatusKöpfe/redHead.png" alt="">
+    <div id="redStatusBarRight">brows</div>
+    <div id="redStatusBarLeft">brows</div>
+    </div>
+`;
+
+setStatus("red");
+function setStatus(color) {
+    console.log("setStatus");
+    if (color == "green") {
+        document.getElementById("catHead").innerHTML = statusContent_green;
+    }
+    else if (color == "yellow") {
+        document.getElementById("catHead").innerHTML = statusContent_yellow;
+    }
+    else if (color == "red") {
+        document.getElementById("catHead").innerHTML = statusContent_red;
+    }
+}
 
 
 function arrowButton() {
