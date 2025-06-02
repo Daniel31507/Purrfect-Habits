@@ -44,7 +44,7 @@ function getUserHabitID(userID) {
             if (data.code === 200) {
                 habitID = data.habitID[0].habitID;
                 printAllNotes();
-                loadTipsForHabit(habitID);
+                loadInfosForHabit(habitID);
             }
         })
         .catch(error => {
@@ -128,18 +128,18 @@ function printAllNotes() {
         });
 }
 
-function loadTipsForHabit(habitId) {
-    fetch(`../api/getHabitTips.php?habitID=${habitId}`)
+let note;
+function loadInfosForHabit(habitId) {
+    fetch(`../api/getHabits.php?habitID=${habitId}`)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
-            tips = data.tips;
+            console.log("Habits:", data);
+            note = data.habits.info;
             showTipp();
         })
         .catch((err) => console.error("Fehler beim Laden der habits", err));
 }
 
 function showTipp() {
-    const randomTip = tips[Math.floor(Math.random() * tips.length)];
-    document.getElementById("rightPage").innerHTML = `<h1> ${randomTip} </h1>`;
+    document.getElementById("rightPage").innerHTML = `<h1> ${note} </h1>`;
 }

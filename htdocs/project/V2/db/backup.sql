@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql-db
--- Erstellungszeit: 24. Mai 2025 um 10:51
--- Server-Version: 9.2.0
--- PHP-Version: 8.2.27
+-- Erstellungszeit: 02. Jun 2025 um 10:17
+-- Server-Version: 8.4.0
+-- PHP-Version: 8.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,22 +33,23 @@ CREATE TABLE `habits` (
   `type` varchar(100) NOT NULL,
   `description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `icon` varchar(100) NOT NULL,
-  `mainIcon_path` varchar(100) NOT NULL
+  `mainIcon_path` varchar(100) NOT NULL,
+  `info` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Daten für Tabelle `habits`
 --
 
-INSERT INTO `habits` (`ID`, `name`, `type`, `description`, `icon`, `mainIcon_path`) VALUES
-(1, 'Schlafmangel', 'gesundheit', 'Zu wenig Schlaf kann die kognitive Leistung und das Wohlbefinden beeinträchtigen.', '😴', '../img/icons/schlafmangel.png'),
-(2, 'Bildschirmzeit', 'gesundheit', 'Zu viel Zeit vor Bildschirmen kann die Schlafqualität und Produktivität verringern.', '📱', '../img/icons/bildschirmzeit.png'),
-(3, 'Ernährung', 'gesundheit', 'Eine unausgewogene Ernährung kann langfristig die Gesundheit beeinträchtigen.', '🥗', '../img/icons/ernährung.png'),
-(4, 'Bewegungsmangel', 'gesundheit', 'Zu wenig körperliche Aktivität kann das Risiko für verschiedene Krankheiten erhöhen.', '🚶', '../img/icons/bewegungsmangel.png'),
-(5, 'Wasserzufuhr', 'gesundheit', 'Zu wenig Wasser trinken kann zu Konzentrationsproblemen und Kopfschmerzen führen.', '💧', '../img/icons/wasserzufuhr.png'),
-(6, 'Stress', 'mental', 'Dauerhafter Stress kann die mentale Gesundheit und Leistungsfähigkeit beeinträchtigen.', '⚡', '../img/icons/stress.png'),
-(7, 'Soziale Isolation', 'mental', 'Wenig soziale Kontakte können das Wohlbefinden und die mentale Gesundheit beeinträchtigen.', '🏠', '../img/icons/isolation.png'),
-(8, 'Prokrastination', 'mental', 'Probleme oder Aufgaben immer wieder aufzuschieben kann zu Sorgen und Stress führen.', '⏰', '../img/icons/prokastination.png');
+INSERT INTO `habits` (`ID`, `name`, `type`, `description`, `icon`, `mainIcon_path`, `info`) VALUES
+(1, 'Schlafmangel', 'gesundheit', 'Zu wenig Schlaf kann die kognitive Leistung und das Wohlbefinden beeinträchtigen.', '😴', '../img/icons/schlafmangel.png', 'Trage auf der Mappe täglich deine geschätzte Schlafdauer in Stunden ein und markiere besonders kurze Nächte.'),
+(2, 'Bildschirmzeit', 'gesundheit', 'Zu viel Zeit vor Bildschirmen kann die Schlafqualität und Produktivität verringern.', '📱', '../img/icons/bildschirmzeit.png', 'Notiere auf der Mappe deine tägliche Bildschirmzeit außerhalb der Arbeit, z. B. Handy oder Fernsehen.'),
+(3, 'Ernährung', 'gesundheit', 'Eine unausgewogene Ernährung kann langfristig die Gesundheit beeinträchtigen.', '🥗', '../img/icons/ernährung.png', 'Bewerte täglich deine Ernährung auf der Mappe: z. B. ausgewogen, unausgewogen oder überspringen von Mahlzeiten.'),
+(4, 'Bewegungsmangel', 'gesundheit', 'Zu wenig körperliche Aktivität kann das Risiko für verschiedene Krankheiten erhöhen.', '🚶', '../img/icons/bewegungsmangel.png', 'Halte auf der Mappe fest, wie viel du dich täglich bewegt hast (z. B. Schritte, Sporteinheit oder Spaziergang).'),
+(5, 'Wasserzufuhr', 'gesundheit', 'Zu wenig Wasser trinken kann zu Konzentrationsproblemen und Kopfschmerzen führen.', '💧', '../img/icons/wasserzufuhr.png', 'Trage auf der Mappe die Menge an Wasser ein, die du pro Tag trinkst (in Gläsern oder Litern).'),
+(6, 'Stress', 'mental', 'Dauerhafter Stress kann die mentale Gesundheit und Leistungsfähigkeit beeinträchtigen.', '⚡', '../img/icons/stress.png', 'Bewerte täglich auf der Mappe dein Stresslevel (z. B. Skala von 1 bis 5) und notiere ggf. Auslöser.'),
+(7, 'Soziale Isolation', 'mental', 'Wenig soziale Kontakte können das Wohlbefinden und die mentale Gesundheit beeinträchtigen.', '🏠', '../img/icons/isolation.png', 'Notiere auf der Mappe, ob du heute soziale Kontakte gepflegt hast (z. B. Treffen, Gespräche).'),
+(8, 'Prokrastination', 'mental', 'Probleme oder Aufgaben immer wieder aufzuschieben kann zu Sorgen und Stress führen.', '⏰', '../img/icons/prokastination.png', 'Markiere auf der Mappe, ob du wichtige Aufgaben erledigt oder aufgeschoben hast und wie du dich dabei gefühlt hast.');
 
 -- --------------------------------------------------------
 
@@ -126,7 +127,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `username`, `password`, `habitID`) VALUES
-(1, 'test', '$2y$10$LtJQ1n5Kjb9YO1E1YprEm.hdtEn7DYs0qlnrIkSPQEux2.llnK29S', 1);
+(1, 'test', '$2y$10$LtJQ1n5Kjb9YO1E1YprEm.hdtEn7DYs0qlnrIkSPQEux2.llnK29S', 1),
+(2, 'admin', '$2y$10$onYhBHRC.5z6IqllWm9mGOr/3JLVM7RQw1xqZYWixdDXuh0V91dri', 2);
 
 -- --------------------------------------------------------
 
@@ -145,7 +147,8 @@ CREATE TABLE `users_notes` (
 --
 
 INSERT INTO `users_notes` (`ID`, `userID`, `entry`) VALUES
-(1, 1, 'Tag 1:  5h Schlaf');
+(1, 1, 'Tag 1:  5h Schlaf'),
+(2, 1, 'Tag 2: 10h Schlaf');
 
 --
 -- Indizes der exportierten Tabellen
@@ -195,13 +198,13 @@ ALTER TABLE `habits_tips`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT für Tabelle `users_notes`
 --
 ALTER TABLE `users_notes`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
