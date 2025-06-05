@@ -117,6 +117,32 @@ setInterval(displayTime, 1000);
 //     }
 // }
 
+// Healthbar-Logik dynamisch
+function statusHead() {
+    let healthbar = 8;
+
+    // Nur abziehen, wenn kein Eintrag in den letzten 24h
+    if (!eintragHeute) {
+        healthbar--;
+    }
+
+    // Update Head je nach Healthbar
+    const catHead = document.getElementById('catHead');
+    catHead.innerHTML = '';
+
+    if (healthbar >= 5) {
+        catHead.innerHTML = `<img id="greenHead" src="../img/katzenStatusKöpfe/greenHead.png">`;
+    } else if (healthbar < 5 && healthbar >= 3) {
+        catHead.innerHTML = `<img id="yellowHead" src="../img/katzenStatusKöpfe/yellowHead.png">`;
+    } else {
+        catHead.innerHTML = `<img id="redHead" src="../img/katzenStatusKöpfe/redHead.png">`;
+    }
+}
+
+// Direkt ausführen, wenn Seite lädt
+window.addEventListener('DOMContentLoaded', statusHead);
+
+
 function getCurrentTimeAndDay() {
     const now = new Date();
 

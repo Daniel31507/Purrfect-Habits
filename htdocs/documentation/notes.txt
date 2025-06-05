@@ -1,0 +1,2 @@
+Bei der user_notes Tabelle fehlt eine Spalte "created_at". 
+Dort sieht man das Datum an welchem der Eintrag erstellt wurde. 
