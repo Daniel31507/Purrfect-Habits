@@ -1,9 +1,10 @@
 <?php
 session_start();
+header('Content-Type: application/json');
 
 if (!isset($_SESSION['userID'])) {
     $_SESSION['userID'] = 0;
-} else {
-    echo json_encode(["userID" => $_SESSION['userID']]);
 }
+
+echo json_encode(["userID" => $_SESSION['userID']]);
 ?>

@@ -24,19 +24,20 @@ let statusContent_red = `
     </div>
 `;
 
-setStatus("red");
-function setStatus(color) {
-    console.log("setStatus");
-    if (color == "green") {
+function updateCatHead(healthbar) {
+    const catHead = document.getElementById('catHead');
+    catHead.innerHTML = '';
+    console.log(healthbar)
+
+    if (healthbar >= 5) {
         document.getElementById("catHead").innerHTML = statusContent_green;
-    }
-    else if (color == "yellow") {
+    } else if (healthbar >= 3) {
         document.getElementById("catHead").innerHTML = statusContent_yellow;
-    }
-    else if (color == "red") {
+    } else {
         document.getElementById("catHead").innerHTML = statusContent_red;
     }
 }
+
 
 
 function arrowButton() {
@@ -69,79 +70,45 @@ function displayTime() {
 }
 setInterval(displayTime, 1000);
 
-// statusHead();
+function statusHead() {
+    fetch('../api/getUserID.php')
+        .then(res => res.json())
+        .then(data => {
+            const userID = data.userID;
 
-// function statusHead() {
-//     let healthbar = 8;
+            if (userID === 0) {
+                console.log("Nicht eingeloggt");
+                return;
+            }
 
-//     //wenn letzter eintrag >= 24h her --> dann -1 leben auf der Healthbar
-//     healthbar--;
+fetch(`../api/get_health.php?userID=${userID}`)
+  .then(response => response.json())
+  .then(data => {
+    if (data.code === 200) {
+      const health = data.health;
+      const lastEntry = data.lastEntry || "kein Eintrag";
+      const bonusReceived = data.bonus;
 
-//     // if (healthbar >= 5) {
-//     //     document.getElementById('catHead').innerHTML = '';
-//     //     document.getElementById('catHead').innerHTML = `
-//     //     <div id="greenAnim">
-//     //       <img id="greenHead" src="../img/katzenStatusKöpfe/greenHead.png">
-//     //       <div id="wholeGreenMouth">
-//     //         <div id="greenMouth">....</div>
-//     //         <div id="toungePiece">....</div>
-//     //       </div>
-//     //     </div>
-//     //   `;
-//     // } else if (healthbar < 5 && healthbar >= 3) {
-//     //     document.getElementById('catHead').innerHTML = '';
-//     //     document.getElementById('catHead').innerHTML = `
-//     //     <div id="yellowAnim">
-//     //     <img id="yellowHead" src="../img/katzenStatusKöpfe/yellowHead.png" alt="">
-//     //     <div id="yellowStatusBar">placeHolder</div>
-//     //     </div>`;
-//     // } else if (healthbar <= 2) {
-//     //     document.getElementById('catHead').innerHTML = '';
-//     //     document.getElementById('catHead').innerHTML = `
-//     //     <div id="redAnim">
-//     //     <img id="redHead" src="../img/katzenStatusKöpfe/redHead.png" alt="">
-//     //     <div id="redStatusBarRight">brows</div>
-//     //     <div id="redStatusBarLeft">brows</div>
-//     //     </div>`;
-//     // }
+      // UI oder Konsole ausgeben
+      console.log("💚 Health:", health);
+      console.log("🗓️ Letzter Eintrag:", lastEntry);
+      if (bonusReceived) {
+        console.log("🎁 Bonusleben erhalten!");
+      }
 
-//     if (healthbar >= 5) {
-//         document.getElementById('catHead').innerHTML = '';
-//         document.getElementById('catHead').innerHTML = `<img id="greenHead" src="../img/katzenStatusKöpfe/greenHead.png">`;
-//     } else if (healthbar < 5 && healthbar >= 3) {
-//         document.getElementById('catHead').innerHTML = '';
-//         document.getElementById('catHead').innerHTML = `<img id="yellowHead" src="../img/katzenStatusKöpfe/yellowHead.png">`;
-//     } else if (healthbar <= 2) {
-//         document.getElementById('catHead').innerHTML = '';
-//         document.getElementById('catHead').innerHTML = `<img id="redHead" src="../img/katzenStatusKöpfe/redHead.png">`;
-//     }
-// }
+      // Hier kannst du z.B. die Health-Anzeige aktualisieren:
+updateCatHead(health);
 
-// Healthbar-Logik dynamisch
-// function statusHead() {
-//     let healthbar = 8;
+    } else {
+      console.warn("⚠️", data.message || "Fehler beim Abrufen");
+    }
+  })
+  .catch(error => {
+    console.error("❌ Fehler beim Fetch:", error);
+  });
 
-//     // Nur abziehen, wenn kein Eintrag in den letzten 24h
-//     if (!eintragHeute) {
-//         healthbar--;
-//     }
-
-//     // Update Head je nach Healthbar
-//     const catHead = document.getElementById('catHead');
-//     catHead.innerHTML = '';
-
-//     if (healthbar >= 5) {
-//         catHead.innerHTML = `<img id="greenHead" src="../img/katzenStatusKöpfe/greenHead.png">`;
-//     } else if (healthbar < 5 && healthbar >= 3) {
-//         catHead.innerHTML = `<img id="yellowHead" src="../img/katzenStatusKöpfe/yellowHead.png">`;
-//     } else {
-//         catHead.innerHTML = `<img id="redHead" src="../img/katzenStatusKöpfe/redHead.png">`;
-//     }
-// }
-
-// Direkt ausführen, wenn Seite lädt
-// window.addEventListener('DOMContentLoaded', statusHead);
-
+        });
+}
 
 function getCurrentTimeAndDay() {
     const now = new Date();
@@ -168,3 +135,4 @@ function updateTime() {
     requestAnimationFrame(updateTime);
 }
 updateTime();
+statusHead();

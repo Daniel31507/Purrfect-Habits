@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql-db
--- Erstellungszeit: 12. Jun 2025 um 06:51
+-- Erstellungszeit: 12. Jun 2025 um 19:35
 -- Server-Version: 9.3.0
 -- PHP-Version: 8.2.27
 
@@ -119,16 +119,18 @@ CREATE TABLE `users` (
   `ID` int NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `habitID` int NOT NULL
+  `habitID` int NOT NULL,
+  `health` int NOT NULL,
+  `lastHealthUpdate` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Daten für Tabelle `users`
 --
 
-INSERT INTO `users` (`ID`, `username`, `password`, `habitID`) VALUES
-(1, 'test', '$2y$10$a8i.twkayMKIIuiJzhQdL.taYQW2iemeQ8fip3hzm329G00I2VZdi', 2),
-(2, 'test1', '$2y$10$uYW.35OnJFaX1O8vmUXFF.DQtOb473XAOwJPjKKfBi6/6lKChXrjS', 3);
+INSERT INTO `users` (`ID`, `username`, `password`, `habitID`, `health`, `lastHealthUpdate`) VALUES
+(1, 'test', '$2y$10$a8i.twkayMKIIuiJzhQdL.taYQW2iemeQ8fip3hzm329G00I2VZdi', 2, 8, '2025-06-12'),
+(2, 'test1', '$2y$10$uYW.35OnJFaX1O8vmUXFF.DQtOb473XAOwJPjKKfBi6/6lKChXrjS', 3, 8, NULL);
 
 -- --------------------------------------------------------
 
@@ -148,7 +150,11 @@ CREATE TABLE `users_notes` (
 --
 
 INSERT INTO `users_notes` (`ID`, `userID`, `entry`, `created_at`) VALUES
-(1, 2, 'Steiner diddy fist', '2025-06-12');
+(1, 2, 'Steiner diddy fist', '2025-06-05'),
+(2, 1, 'hallo slavik ', '2025-06-09'),
+(3, 1, 'Eintrag vor 3 Tagen', '2025-06-11'),
+(4, 1, 'Eintrag vor 2 Tagen', '2025-06-10'),
+(7, 1, 'hallo', '2025-06-12');
 
 --
 -- Indizes der exportierten Tabellen
@@ -204,7 +210,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `users_notes`
 --
 ALTER TABLE `users_notes`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
