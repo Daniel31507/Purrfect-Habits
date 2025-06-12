@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hauptseite | Purrfect Habits</title>
   <?php
-  session_start();
-  $userID = $_SESSION['ID'];
 
   echo '<link    href="../css/hauptseite.css'   . '?' . time() . '" rel="stylesheet">';
   echo '<link    href="../css/animation.css'   . '?' . time() . '" rel="stylesheet">';
   echo '<script  src="../js/hauptseite.js'    . '?' . time() . '" defer></script>';
-  echo '<script  src="getEntries.php?userID=<?= $userID ?>"></script>';
   ?>
 </head>
 

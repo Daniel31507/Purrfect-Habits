@@ -1,4 +1,5 @@
 
+
 let userID;
 let habitID;
 let habitName;
@@ -58,9 +59,7 @@ function openPopUp() {
 
 function closePopUp() {
     document.getElementById("popUpBack").style.display = "none";
-}
-
-function addNote() {
+}function addNote() {
     if (userID !== 0) {
         let note = document.getElementById("noteInput").value;
 
@@ -68,6 +67,14 @@ function addNote() {
             let formData = new FormData();
             formData.append('entry', note);
             formData.append('userID', userID);
+
+            // Vollständiges Datum: YYYY-MM-DD
+            let now = new Date();
+            let year = now.getFullYear();
+            let month = String(now.getMonth() + 1).padStart(2, '0');
+            let day = String(now.getDate()).padStart(2, '0');
+            let createdAt = `${year}-${month}-${day}`;
+            formData.append('created_at', createdAt);
 
             fetch('../api/setEntry.php', {
                 method: "POST",
@@ -94,6 +101,7 @@ function addNote() {
         console.log("Nicht angemeldet");
     }
 }
+    
 
 function printAllNotes() {
     let formData = new FormData();

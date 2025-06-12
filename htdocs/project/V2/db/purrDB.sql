@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql-db
--- Erstellungszeit: 02. Jun 2025 um 10:17
--- Server-Version: 8.4.0
--- PHP-Version: 8.2.8
+-- Erstellungszeit: 12. Jun 2025 um 06:51
+-- Server-Version: 9.3.0
+-- PHP-Version: 8.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -127,8 +127,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `username`, `password`, `habitID`) VALUES
-(1, 'test', '$2y$10$LtJQ1n5Kjb9YO1E1YprEm.hdtEn7DYs0qlnrIkSPQEux2.llnK29S', 1),
-(2, 'admin', '$2y$10$onYhBHRC.5z6IqllWm9mGOr/3JLVM7RQw1xqZYWixdDXuh0V91dri', 2);
+(1, 'test', '$2y$10$a8i.twkayMKIIuiJzhQdL.taYQW2iemeQ8fip3hzm329G00I2VZdi', 2),
+(2, 'test1', '$2y$10$uYW.35OnJFaX1O8vmUXFF.DQtOb473XAOwJPjKKfBi6/6lKChXrjS', 3);
 
 -- --------------------------------------------------------
 
@@ -139,16 +139,16 @@ INSERT INTO `users` (`ID`, `username`, `password`, `habitID`) VALUES
 CREATE TABLE `users_notes` (
   `ID` int NOT NULL,
   `userID` int NOT NULL,
-  `entry` varchar(100) NOT NULL
+  `entry` varchar(100) NOT NULL,
+  `created_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Daten für Tabelle `users_notes`
 --
 
-INSERT INTO `users_notes` (`ID`, `userID`, `entry`) VALUES
-(1, 1, 'Tag 1:  5h Schlaf'),
-(2, 1, 'Tag 2: 10h Schlaf');
+INSERT INTO `users_notes` (`ID`, `userID`, `entry`, `created_at`) VALUES
+(1, 2, 'Steiner diddy fist', '2025-06-12');
 
 --
 -- Indizes der exportierten Tabellen
@@ -204,7 +204,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `users_notes`
 --
 ALTER TABLE `users_notes`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
