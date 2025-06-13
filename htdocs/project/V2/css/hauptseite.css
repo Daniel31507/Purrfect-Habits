@@ -180,9 +180,8 @@ body {
 
 #datum {
     position: absolute;
-    bottom: 2%;
-    left: 41vw;
-    background: rgba(0, 0, 0, 0.7);
+    bottom: 4%;
+    left: 39vw;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
