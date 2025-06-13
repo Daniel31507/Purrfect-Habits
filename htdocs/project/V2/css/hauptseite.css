@@ -7,7 +7,7 @@ body {
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
-    background: url("../img/ZimmerHauptseite.jpg");
+    background-image: url(../img/ZimmerHauptseite.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
