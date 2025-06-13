@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Purrfect Habits" company="" webLink="http://" view-date="2025-02-01" view-index="0" gantt-divider-location="348" resource-divider-location="300" version="3.3.3312" locale="de_DE">
+<?xml version="1.0" encoding="UTF-8"?><project name="Purrfect Habits" company="" webLink="http://" view-date="2025-02-01" view-index="0" gantt-divider-location="334" resource-divider-location="300" version="3.3.3312" locale="de_DE">
     <description/>
     <view zooming-state="default:8" id="gantt-chart">
-        <field id="tpd3" name="Vorgang" width="188" order="0"/>
-        <field id="tpd4" name="Anfang" width="72" order="1"/>
-        <field id="tpd5" name="Ende" width="72" order="2"/>
+        <field id="tpd3" name="Vorgang" width="180" order="0"/>
+        <field id="tpd4" name="Anfang" width="69" order="1"/>
+        <field id="tpd5" name="Ende" width="69" order="2"/>
         <field id="tpd15" name="Notizen" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
         <option id="filter.overdueTasks" value="false"/>
         <option id="filter.inProgressTodayTasks" value="false"/>
-        <timeline><![CDATA[11,16,14,21,22,13,15,2,8,1,4,12,17,9,20,23,18,3]]></timeline>
+        <timeline><![CDATA[3,12,2,20,22,15,16,14,18,17,21,9,8,1,13,23,4,11]]></timeline>
         <option id="color.recent"><![CDATA[#cc00cc #cccc00 #cc0033 #33cc00 #9999ff #ff33ff #00ffff #ffff00 #ff3333 #00ff00]]></option>
     </view>
     <view id="resource-table">
@@ -76,27 +76,27 @@
             </task>
         </task>
         <task id="13" uid="0097f178c68b4920a4b871c1ff7cb684" name="Meilenstein - Ressourcen" color="#ff3333" meeting="true" start="2025-03-13" duration="0" complete="100" expand="true"/>
-        <task id="14" uid="10ce93791dc0464285ad7a8a0b22c7a4" name="Webseite" color="#cccc00" meeting="false" start="2025-03-17" duration="34" complete="70" expand="true">
+        <task id="14" uid="10ce93791dc0464285ad7a8a0b22c7a4" name="Webseite" color="#cccc00" meeting="false" start="2025-03-17" duration="34" complete="100" expand="true">
             <depend id="19" type="2" difference="0" hardness="Strong"/>
             <task id="15" uid="6f97a1940faf43b383c81661de5afee8" name="Grundstruktur und Animation" color="#ffff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-03-17" duration="15" complete="100" expand="true">
                 <depend id="16" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="16" uid="516ba2b5d2a14295a3c37a18851b1ce7" name="Volle Funktionalität" color="#ffff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-04-07" duration="12" complete="75" expand="true">
+            <task id="16" uid="516ba2b5d2a14295a3c37a18851b1ce7" name="Volle Funktionalität" color="#ffff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-04-07" duration="12" complete="100" expand="true">
                 <depend id="17" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="17" uid="2c64e53864f64392a6a91af618197411" name="Einbindung der Animationen" color="#ffff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-04-23" duration="7" complete="0" expand="true">
+            <task id="17" uid="2c64e53864f64392a6a91af618197411" name="Einbindung der Animationen" color="#ffff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-04-23" duration="7" complete="100" expand="true">
                 <depend id="18" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
         <task id="18" uid="132640cb44f147a4ba7d980af2d4c833" name="Meilenstein - Webseite" color="#cccc00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="true" start="2025-05-02" duration="0" complete="0" expand="true"/>
-        <task id="19" uid="c10f2f0bb0d044b397dd1867b049af83" name="Fertigstellung" color="#cc00cc" meeting="false" start="2025-05-09" duration="24" complete="0" expand="true">
-            <task id="20" uid="652878fe8c7b4b71b1157055a0523369" name="Nutzertests durchführen" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-05-09" duration="5" complete="0" expand="true">
+        <task id="19" uid="c10f2f0bb0d044b397dd1867b049af83" name="Fertigstellung" color="#cc00cc" meeting="false" start="2025-05-09" duration="24" complete="96" expand="true">
+            <task id="20" uid="652878fe8c7b4b71b1157055a0523369" name="Nutzertests durchführen" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-05-09" duration="5" complete="100" expand="true">
                 <depend id="21" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="21" uid="cc1fa3e4b05443908f503a2799bc72d8" name="Feedback umsetzen" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-05-16" duration="8" complete="0" expand="true">
+            <task id="21" uid="cc1fa3e4b05443908f503a2799bc72d8" name="Feedback umsetzen" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-05-16" duration="8" complete="100" expand="true">
                 <depend id="22" type="2" difference="10" hardness="Strong"/>
             </task>
-            <task id="22" uid="0caa0b22b4774dd3a55ceb747f384eaa" name="Endresultat präsentieren" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-06-11" duration="1" complete="0" expand="true">
+            <task id="22" uid="0caa0b22b4774dd3a55ceb747f384eaa" name="Endresultat präsentieren" color="#ff33ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2025-06-11" duration="1" complete="50" expand="true">
                 <depend id="23" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
